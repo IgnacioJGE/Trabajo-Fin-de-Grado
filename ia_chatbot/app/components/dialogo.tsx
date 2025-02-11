@@ -13,7 +13,7 @@ const dialogo = () => {
       setInputValue("")
     }
   }
-  console.log(inputValue)
+
   return (
     <div>
       <br />

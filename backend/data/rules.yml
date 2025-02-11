@@ -1,13 +1,25 @@
 version: "3.1"
-
+#Reglas fijas
 rules:
 
-- rule: Say goodbye anytime the user says goodbye
+- rule: Decir adios, hay que ser educado
   steps:
-  - intent: goodbye
-  - action: utter_goodbye
+  - intent: adios
+  - action: utter_adios
 
-- rule: Say 'I am a bot' anytime the user challenges
+
+- rule: Saludar, hay que ser educado
   steps:
-  - intent: bot_challenge
-  - action: utter_iamabot
+  - intent: saludar
+  - action: utter_hola
+
+- rule: Aclarar Bot
+  steps:
+  - intent: saludar
+  - action: utter_hola
+
+- rule: Clalmar
+  steps:
+  - intent: insultar
+  - action: utter_relajate
+

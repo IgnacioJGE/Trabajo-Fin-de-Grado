@@ -1,0 +1,19 @@
+version: "3.1"
+
+#Aquí describo las respuestas que dará el bot 
+
+responses:
+  utter_adios:
+  - text: "Hasta luego."
+
+  utter_iamabot:
+  - text: "Soy un Bot."
+
+  utter_hola:
+  - text: "Hola, ¿cómo estas?"
+
+  utter_alegrarse:
+  - text: "Genial me alegro mucho."
+
+  utter_relajate:
+  - text: "Bajate dos tonitos maestro."
