@@ -43,6 +43,16 @@ body {
   word-wrap: break-word; /* Ajusta el texto largo a una nueva línea si es necesario */
   align-self: flex-end; /* Alinea el recuadro del texto a la derecha dentro del contenedor */
 }
+.text-left-box {
+  border: 2px solid #ccc; /* Agrega un borde visible */
+  border-radius: 15px; /* Bordes redondeados */
+  padding: 10px; /* Espaciado interno */
+  background-color: #f9f9f9; /* Fondo opcional */
+  margin: 5px 0; /* Espaciado entre mensajes */
+  max-width: 90%; /* Evita que el texto sea más ancho que el contenedor */
+  word-wrap: break-word; /* Ajusta el texto largo a una nueva línea si es necesario */
+  align-self: flex-start; /* Alinea el recuadro del texto a la derecha dentro del contenedor */
+}
 
 
 .textocentro {
@@ -60,10 +70,12 @@ body {
 }
 .inputbonito{
   border: 2px solid #ccc;
-  border-radius: 1px; /* Hace las esquinas ovaladas */
+  border-radius: 10px; /* Hace las esquinas ovaladas */
   background-color: #f9f9f9; 
   padding: 5px;
-  direction: rtl;
+  direction: ltr;
+  text-align: left;
+  overflow-x: auto; 
   margin: 5px 0;
 }
 
