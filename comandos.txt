@@ -1,0 +1,4 @@
+rasa run --enable-api --cors "*" // para correr el bot con permisos coors
+rasa train // para entrenar
+npm run dev // para correr el front
+

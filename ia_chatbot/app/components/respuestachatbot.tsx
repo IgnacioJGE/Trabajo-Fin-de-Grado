@@ -4,7 +4,7 @@ async function respuestachatbot(mensaje: string) {
   try {
     // Realiza la llamada API usando axios
     const response = await axios.post('http://localhost:5005/webhooks/rest/webhook', {
-      message: mensaje, // Asegúrate de pasar el mensaje correctamente
+      message: mensaje, 
     });
 
     // Verifica que haya respuesta y retorna el texto del chatbot
