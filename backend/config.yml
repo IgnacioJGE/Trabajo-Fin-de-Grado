@@ -1,4 +1,6 @@
-# The config recipe.
+# MUY INTERESANTE PARA HACER PRUEBAS 
+
+
 # https://rasa.com/docs/rasa/model-configuration/
 recipe: default.v1
 
@@ -24,6 +26,9 @@ pipeline:
 - name: EntitySynonymMapper
 - name: ResponseSelector
   epochs: 100
+- name: FallbackClassifier
+  threshold: 0.85  # Si la confianza es menor a 80%, activa el fallback
+  ambiguity_threshold: 0.1
 
 # Configuration for Rasa Core.
 # https://rasa.com/docs/rasa/core/policies/

@@ -20,90 +20,145 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 .message-container {
-  width: 700px; /* Ancho del contenedor */
-  height: 500px; /* Alto del contenedor */
-  border: 1px solid #ccc; /* Borde */
-  padding: 10px; /* Espaciado interno */
-  overflow-y: auto; /* Habilitar scroll vertical */
-  overflow-x: hidden; /* Ocultar scroll horizontal */ 
-  background-color: #f9f9f9; /* Color de fondo */
-  border-radius: 8px; /* Bordes redondeados */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra */
+  min-width: 43.75rem; /* Tamaño fijo para pantallas grandes */
+  min-height: 31.25rem; /* Tamaño fijo para pantallas grandes */
+  width: 90%;
+  height: auto;
+  border: 0.063rem solid #ccc;
+  padding: 0.625rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   display: flex;
-  flex-direction: column-reverse; /* Invertir el orden de los mensajes */
+  flex-direction: column-reverse;
+}
+
+.text-right-box, .text-left-box {
+  border: 2px solid #ccc;
+  border-radius: 15px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  margin: 5px 0;
+  max-width: 90%;
+  word-wrap: break-word;
 }
 
 .text-right-box {
-  border: 2px solid #ccc; /* Agrega un borde visible */
-  border-radius: 15px; /* Bordes redondeados */
-  padding: 10px; /* Espaciado interno */
-  background-color: #f9f9f9; /* Fondo opcional */
-  margin: 5px 0; /* Espaciado entre mensajes */
-  max-width: 90%; /* Evita que el texto sea más ancho que el contenedor */
-  word-wrap: break-word; /* Ajusta el texto largo a una nueva línea si es necesario */
-  align-self: flex-end; /* Alinea el recuadro del texto a la derecha dentro del contenedor */
+  align-self: flex-end;
 }
+
 .text-left-box {
-  border: 2px solid #ccc; /* Agrega un borde visible */
-  border-radius: 15px; /* Bordes redondeados */
-  padding: 10px; /* Espaciado interno */
-  background-color: #f9f9f9; /* Fondo opcional */
-  margin: 5px 0; /* Espaciado entre mensajes */
-  max-width: 90%; /* Evita que el texto sea más ancho que el contenedor */
-  word-wrap: break-word; /* Ajusta el texto largo a una nueva línea si es necesario */
-  align-self: flex-start; /* Alinea el recuadro del texto a la derecha dentro del contenedor */
+  align-self: flex-start;
 }
 
-
-.textocentro {
-  display: flex;
-  flex-direction: column; /* Apila los elementos (título, recuadro de mensajes y formulario) verticalmente */
-  justify-content: flex-start; /* Alinea los elementos desde la parte superior */
-  align-items: center; /* Centra los elementos horizontalmente dentro de textocentro */
-  align-self:center;
-  padding: 20px;
+.imagen-left-box {
+  width: 100%; /* Ajusta el ancho de la imagen al 100% del contenedor */
+  max-width: 300px; /* Limita el ancho máximo de la imagen */
+  height: 300px; /* Mantiene la proporción de la imagen */
   border: 2px solid #ccc;
   border-radius: 15px;
-  background-color: #fff; /* Fondo blanco para el contenedor */
-  max-width: 90%; /* Evita que el contenedor sea demasiado ancho */
-  width: fit-content; /* El contenedor ajusta su tamaño al contenido */
+  padding: 10px;
+  background-color: #f9f9f9;
+  margin: 5px 0;
 }
-.inputbonito{
-  display: flex;
+
+.inputbonito {
   height: 65px;
-  flex-grow:1;
+  flex-grow: 1;
   border: 2px solid #ccc;
-  border-radius: 10px; /* Hace las esquinas ovaladas */
-  background-color: #f9f9f9; 
+  border-radius: 10px;
+  background-color: #f9f9f9;
   padding: 5px;
   direction: ltr;
   vertical-align: top;
   resize: none;
+  outline: none;
   text-align: left;
-  overflow-x: auto; 
+  overflow-x: auto;
   margin: 5px 0;
 }
 
-.imagenbutton{
-  display: flex;
+.imagenbutton {
   background-image: url("./recursos/786306.png");
-  background-size: cover; /* Ajusta la imagen al tamaño del botón */
-  background-position: center; /* Centra la imagen */
-  width: 32px;  /* Define un tamaño para el botón */
-  height: 32px; /* Define un tamaño para el botón */
-  border: none; /* Elimina el borde del botón */
-  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  background-size: cover;
+  background-position: center;
+  width: 32px;
+  height: 32px;
+  border: none;
+  cursor: pointer;
 }
+
 .contenedor-inputs {
   display: flex;
-  height: 75px; /* Alto del contenedor */
-  align-items: center; /* Centra los elementos verticalmente */
-  justify-content: flex-end; /* Alinea los elementos al final (a la derecha) */
-  gap: 10px; /* Espacio entre el input y el botón */
-  margin-top: 10px; /* Espacio entre el recuadro y el contenedor de los inputs */
+  height: 75px;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 10px;
 }
+
 .contenedor-principal {
   display: flex;
-  justify-content: center; /* Centra el contenido horizontalmente */
-  align-items: center; /* Centra el contenido verticalmente */
+  flex-direction: column;
+  align-items: center;
+  padding: 1.25rem;
+  border: 2px solid #ccc;
+  border-radius: 15px;
+  background-color: #fff;
+  width: 50%;
+  max-height: 90%;
+  margin: auto;
+  overflow: hidden;
+}
+
+/* Media Query para pantallas pequeñas */
+@media (max-width: 500px) {
+  .message-container {
+    height: 400px; /* Reducir altura en pantallas pequeñas */
+    width: 100%; /* Ajustar el ancho del contenedor */
+  }
+
+  .imagen-left-box {
+    width: 80%; /* Reducir el tamaño de las imágenes */
+    max-width: 250px; /* Limitar el ancho máximo de las imágenes */
+    margin: 10px 0;
+  }
+
+  .contenedor-inputs {
+    width: 100%; /* Hacer el input más ancho */
+    margin-bottom: 10px;
+  }
+
+  .inputbonito {
+    width: 100%; /* Hacer el input más ancho */
+    margin-bottom: 10px;
+  }
+
+  .imagenbutton {
+    width: 40px; /* Aumentar el tamaño del botón */
+    height: 40px;
+  }
+}
+
+/* Media Query para pantallas muy pequeñas (por ejemplo, móviles en modo retrato) */
+@media (max-width: 480px) {
+  .message-container {
+    height: 300px; /* Reducir aún más la altura */
+  }
+
+  .imagen-left-box {
+    width: 80%; /* Ajustar imágenes para pantallas aún más pequeñas */
+    max-width: 200px;
+  }
+
+  .inputbonito {
+    height: 50px; /* Reducir la altura del input */
+  }
+
+  .imagenbutton {
+    width: 30px;
+    height: 30px;
+  }
 }

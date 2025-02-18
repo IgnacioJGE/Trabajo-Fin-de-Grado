@@ -6,7 +6,9 @@ intents:
   - bot_challenge
   - saludar
   - adios
-  - insultar
+  - positivo
+  - basura
+  - imagen
 
 nlu:
   - intent: adios
@@ -54,13 +56,31 @@ nlu:
       - Buenas noches
       - Buenas tardes
 
-  - intent: insultar
+  - intent: positivo
     examples: |
-      - Gilipollas
-      - Tonto
-      - Estúpido
-      - Burro
-      - Payaso
-      - Mongolo
-      - Culia
-      - Putito
+      - bien
+      - correcot
+      - positivo
+      - maravillosamente
+      - genial
+
+  - intent: basura
+    examples: |
+      - jdhfjkdsfhjksd
+      - asdjhkasdhkj
+      - ksdfjksdjfksdjf
+      - ajshdkjashdkjh
+      - qwertyuiop
+      - asdfghjkl
+      - zxcvbnm
+
+  - intent: imagen 
+    examples: |
+      - imagen
+      - img
+      - foto
+      - muestrame imagen
+      - enseñame foto
+
+actions:
+  - utter_default

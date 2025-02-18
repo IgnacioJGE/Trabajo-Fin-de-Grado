@@ -9,4 +9,12 @@ stories:
   - intent: adios
   - action: utter_adios
 
+- story: Hola ayuda
+  steps:
+  - intent: saludar
+  - action: utter_hola
+  - intent: positivo
+  - action: utter_ofrecer_ayuda
+
+
 

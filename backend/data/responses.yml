@@ -7,13 +7,23 @@ responses:
   - text: "Hasta luego."
 
   utter_iamabot:
-  - text: "Soy un Bot."
+  - text: "Soy un chatbot diseñado para proporcionar soporte de IT."
 
   utter_hola:
   - text: "Hola, ¿cómo estas?"
+  - text: "Hola, ¿Que tal?"
 
   utter_alegrarse:
   - text: "Genial me alegro mucho."
 
   utter_relajate:
   - text: "Bajate dos tonitos maestro."
+
+  utter_ofrecer_ayuda:
+  - text: "¿En qué puedo ayudarte?"
+
+  utter_default:
+    - text: "Lo siento, no te he entendido, ¿Podrias reformular tu pregunta?"
+  
+  utter_drop_imagen:
+    - text: "https://files.catbox.moe/83itdt.png"

@@ -3,16 +3,21 @@ import React from "react";
 import { useState, useEffect } from "react";
 import respuestachatbot from "./respuestachatbot"
 const dialogo = () => {
+  const regexemail= RegExp("https://([A-Za-z0-9]+(\.[A-Za-z0-9]+)+)/[A-Za-z0-9]+\.png");
   const [inputValue, setInputValue] = useState("");
   const [displayValue, setDisplayValue] = useState<{text: string, usuario:string}[]>([]);
   async function handlesubmit(e: any) {
     e.preventDefault();
     if(inputValue!=""){
-      setDisplayValue(prevDisplay=>[...prevDisplay,{text:inputValue, usuario:"persona"}]);
+      setDisplayValue(prevDisplay=>[...prevDisplay,{text:inputValue, usuario:"persona"}])
       const respuesta = await respuestachatbot(inputValue)
       setTimeout(() => {
-        setDisplayValue((prevDisplay) => [...prevDisplay,{text:respuesta, usuario:"bot"}]);}, 500);
-      console.log(respuesta)
+        if(regexemail.test(respuesta)){
+        setDisplayValue((prevDisplay) => [...prevDisplay,{text:respuesta, usuario:"bot_imagen"}])     
+        }else{
+          setDisplayValue((prevDisplay) => [...prevDisplay,{text:respuesta, usuario:"bot"}])
+        }
+      }, 500);
       setInputValue("") 
 
     }
@@ -35,8 +40,11 @@ const dialogo = () => {
           if(val.usuario== "persona"){
             return <p className="text-right-box" key={index}>{val.text}</p>
 
-          }else{
+          }else if(val.usuario== "bot"){
             return <p className="text-left-box" key={index}>{val.text}</p>
+
+          }else{
+            return <img className="imagen-left-box" key={index} src={val.text}></img>
 
           }
         

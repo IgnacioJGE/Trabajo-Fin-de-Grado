@@ -6,7 +6,11 @@ intents:
   - bot_challenge
   - saludar
   - adios
-  - insultar
+  - positivo
+  - basura
+  - imagen
+
+
 
 
 

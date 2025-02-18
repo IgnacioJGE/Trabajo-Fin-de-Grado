@@ -18,8 +18,23 @@ rules:
   - intent: saludar
   - action: utter_hola
 
-- rule: Clalmar
-  steps:
-  - intent: insultar
-  - action: utter_relajate
 
+- rule: Soy bot
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: Responder con mensaje estándar si la confianza es baja
+  steps:
+  - intent: nlu_fallback
+  - action: utter_default
+
+- rule: basura
+  steps:
+  - intent: basura
+  - action: utter_default
+
+- rule: imagen
+  steps:
+  - intent: imagen
+  - action: utter_drop_imagen
