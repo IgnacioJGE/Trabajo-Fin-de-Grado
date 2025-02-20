@@ -23,7 +23,8 @@ responses:
   - text: "¿En qué puedo ayudarte?"
 
   utter_default:
-    - text: "Lo siento, no te he entendido, ¿Podrias reformular tu pregunta?"
+  - text: "Lo siento, no te he entendido, ¿Podrias reformular tu pregunta?"
   
   utter_drop_imagen:
-    - text: "https://files.catbox.moe/83itdt.png"
+    #- text: "https://files.catbox.moe/83itdt.png"
+  - text: "/recursos/imagen.png"

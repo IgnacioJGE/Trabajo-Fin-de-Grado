@@ -64,7 +64,7 @@ body {
 }
 
 .inputbonito {
-  height: 10vh;
+  max-height: 10vh;
   flex-grow: 1;
   border: 2px solid #ccc;
   border-radius: 10px;
@@ -80,7 +80,7 @@ body {
 }
 
 .imagenbutton {
-  background-image: url("./recursos/786306.png");
+  background-image: url("/recursos/786306.png");
   background-size: 100% 100%;
   background-position: center;
   width: 3vw;
@@ -91,7 +91,7 @@ body {
 
 .contenedor-inputs {
   display: flex;
-  height: 12vh;
+  max-height: 12vh;
   align-items: center;
   justify-content: flex-end;
   gap: 1vw;

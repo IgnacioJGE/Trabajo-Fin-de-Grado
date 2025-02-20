@@ -3,8 +3,9 @@ import React from "react";
 import { useState, useEffect } from "react";
 import respuestachatbot from "./respuestachatbot"
 const dialogo = () => {
-  const regexemail= RegExp("https://([A-Za-z0-9]+(\.[A-Za-z0-9]+)+)/[A-Za-z0-9]+\.png");
-  const [inputValue, setInputValue] = useState("");
+  //const regexemail= RegExp("https://([A-Za-z0-9]+(\.[A-Za-z0-9]+)+)/[A-Za-z0-9]+\.png");
+  const regexemail= RegExp("\/recursos/[A-Za-z0-9]+\.png");
+  const [inputValue, setInputValue] = useState(""); 
   const [displayValue, setDisplayValue] = useState<{text: string, usuario:string}[]>([]);
   async function handlesubmit(e: any) {
     e.preventDefault();
