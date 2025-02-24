@@ -22,7 +22,6 @@ const dialogo = () => {
       setInputValue("") 
 
     }
- 
   }
   const handleKeyPress = (e:any) => {
     if (e.key === 'Enter') {

@@ -2,12 +2,10 @@ import axios from "axios";
 
 async function respuestachatbot(mensaje: string) {
   try {
-    // Realiza la llamada API usando axios
-    const response = await axios.post('http://localhost:5005/webhooks/rest/webhook', {
+    const response = await axios.post('http://192.168.128.82:5005/webhooks/rest/webhook', {
       message: mensaje, 
     });
 
-    // Verifica que haya respuesta y retorna el texto del chatbot
     if (response.data && response.data.length > 0) {
 
       return response.data[0].text || "Sin respuesta";
