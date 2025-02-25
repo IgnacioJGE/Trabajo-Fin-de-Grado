@@ -7,18 +7,6 @@ rules:
   - intent: adios
   - action: utter_adios
 
-
-- rule: Saludar, hay que ser educado
-  steps:
-  - intent: saludar
-  - action: utter_hola
-
-- rule: Aclarar Bot
-  steps:
-  - intent: saludar
-  - action: utter_hola
-
-
 - rule: Soy bot
   steps:
   - intent: bot_challenge
@@ -38,3 +26,33 @@ rules:
   steps:
   - intent: imagen
   - action: utter_drop_imagen
+
+- rule: Saludar que es de buena educación
+  condition:
+    - slot_was_set:
+        - nombre: something
+        - delegacion: something
+  steps:
+    - intent: saludar
+    - action: utter_hola_conociemiento
+
+- rule: Saludar sin conocimiento
+  condition:
+    - slot_was_set:
+        - nombre: null
+        - delegacion: null
+  steps:
+    - intent: saludar
+    - action: utter_hola
+
+
+- rule: Completar formulario
+  condition:
+    - active_loop: formulario_nombre_delegacion
+  steps:
+  - action: formulario_nombre_delegacion
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: utter_ofrecer_ayuda
+

@@ -2,8 +2,8 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import respuestachatbot from "./respuestachatbot"
-const dialogo = () => {
-  //const regexemail= RegExp("https://([A-Za-z0-9]+(\.[A-Za-z0-9]+)+)/[A-Za-z0-9]+\.png");
+import generarSesionUnica from "./generadorsesion";
+function dialogo  (sesion:string) {
   const regexemail= RegExp("\/recursos/[A-Za-z0-9]+\.png");
   const [inputValue, setInputValue] = useState(""); 
   const [displayValue, setDisplayValue] = useState<{text: string, usuario:string}[]>([]);
@@ -11,7 +11,9 @@ const dialogo = () => {
     e.preventDefault();
     if(inputValue!=""){
       setDisplayValue(prevDisplay=>[...prevDisplay,{text:inputValue, usuario:"persona"}])
-      const respuesta = await respuestachatbot(inputValue)
+      console.log(sesion)
+       const respuesta = await respuestachatbot(inputValue,sesion)
+      
       setTimeout(() => {
         if(regexemail.test(respuesta)){
         setDisplayValue((prevDisplay) => [...prevDisplay,{text:respuesta, usuario:"bot_imagen"}])     
@@ -25,8 +27,8 @@ const dialogo = () => {
   }
   const handleKeyPress = (e:any) => {
     if (e.key === 'Enter') {
-      e.preventDefault();  // Prevenir que se añada una nueva línea en el textarea
-      handlesubmit(e);  // Llamar a la función de envío del formulario
+      e.preventDefault();  
+      handlesubmit(e);  
       setInputValue("") 
     }
   };

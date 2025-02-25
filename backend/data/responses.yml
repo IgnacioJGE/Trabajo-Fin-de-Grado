@@ -9,18 +9,17 @@ responses:
   utter_iamabot:
   - text: "Soy un chatbot diseñado para proporcionar soporte de IT."
 
+  utter_hola_conociemiento:
+  - text: "Hola, {nombre}."
+
   utter_hola:
-  - text: "Hola, ¿cómo estas?"
-  - text: "Hola, ¿Que tal?"
+  - text: "Hola, ¿Podrias indicarme tu nombre?"
 
   utter_alegrarse:
   - text: "Genial me alegro mucho."
 
-  utter_relajate:
-  - text: "Bajate dos tonitos maestro."
-
   utter_ofrecer_ayuda:
-  - text: "¿En qué puedo ayudarte?"
+  - text: "¿En qué puedo ayudarte {nombre}?"
 
   utter_default:
   - text: "Lo siento, no te he entendido, ¿Podrias reformular tu pregunta?"
@@ -28,3 +27,15 @@ responses:
   utter_drop_imagen:
     #- text: "https://files.catbox.moe/83itdt.png"
   - text: "/recursos/imagen.png"
+
+  utter_ask_nombre:
+  - text: "¿Puedes indicarme cuál es tu nombre?"
+  
+  utter_ask_delegacion:
+  - text: "¿Podrias indicarme en qué delegación te trabajas?"
+
+  utter_delega:
+  - text: "{delegacion}."
+
+  utter_nombre:
+  - text: "{nombre}."

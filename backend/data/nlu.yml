@@ -9,6 +9,8 @@ intents:
   - positivo
   - basura
   - imagen
+  - dar_info_basica
+
 
 nlu:
   - intent: adios
@@ -50,6 +52,7 @@ nlu:
   - intent: saludar
     examples: |
       - Hola
+      - holaaaa
       - Que tal
       - Como andas
       - Buenos días
@@ -81,6 +84,42 @@ nlu:
       - foto
       - muestrame imagen
       - enseñame foto
+
+
+  - intent: dar_info_basica 
+    examples: |
+      - [Madrid](delegacion)
+      - Trabajo en la delegación de [Madrid](delegacion)
+      - [Barcelona](delegacion)
+      - [Valladolid](delegacion)
+      - Estoy en [Burgos](delegacion)
+      - Mi delegacion es [Cordiba](delegacion)
+      - [Alicante](delegacion)
+      - [Sevilla](delegacion)
+      - [Merida](delegacion)
+      - [Santiago](delegacion)
+      - [Jaen](delegacion)
+      - [Almeria](delegacion)
+      - [Granada](delegacion)
+      - [Malaga](delegacion)
+      - [Portugal](delegacion)
+      - Me llamo [Manel](nombre)
+      - Mi nombre es [Laura](nombre)
+      - Soy [Carlos](nombre)
+      - [Ana](nombre)
+      - [Ignacio](nombre)
+      - [Sara](nombre)
+      - [Javier](nombre)
+      - [Marta](nombre)
+      - [Pablo](nombre)
+      - [Sofia](nombre)
+      - [Lucia](nombre)
+      - [David](nombre)
+      - [Maria](nombre)
+      - [Jose](nombre)
+      - [Laura](nombre)
+
+
 
 actions:
   - utter_default

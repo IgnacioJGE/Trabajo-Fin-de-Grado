@@ -2,19 +2,11 @@ version: "3.1"
 #Historias
 stories:
 
-- story: hola y adios
+- story: Pedir datos
   steps:
-  - intent: saludar
-  - action: utter_hola
-  - intent: adios
-  - action: utter_adios
-
-- story: Hola ayuda
-  steps:
-  - intent: saludar
-  - action: utter_hola
-  - intent: positivo
-  - action: utter_ofrecer_ayuda
-
-
+  - or:
+    - intent: afirmar
+    - intent: dar_info_basica
+  - action: formulario_nombre_delegacion
+  - active_loop: null
 

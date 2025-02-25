@@ -9,11 +9,46 @@ intents:
   - positivo
   - basura
   - imagen
+  - dar_info_basica
 
+entities:
+  - nombre
+  - delegacion
 
+slots:
+  nombre:
+    type: text
+    influence_conversation: true  # Permite que el slot afecte la conversación
+    mappings:
+      - type: from_entity
+        entity: nombre
+  
+  delegacion:
+    type: text
+    influence_conversation: true  # Permite que el slot afecte la conversación
+    mappings:
+      - type: from_entity
+        entity: delegacion
+  
+  problema:
+    type: text
+    influence_conversation: true  # Permite que el slot afecte la conversación
+    mappings:
+      - type: from_entity
+        entity: problema
 
+forms: 
+  formulario_nombre_delegacion:
+    required_slots:
+      - nombre
+      - delegacion
+
+actions:
+  - action_activar_formulario
 
 
 session_config:
-  session_expiration_time: 60
-  carry_over_slots_to_new_session: true
+  session_expiration_time: 30
+  carry_over_slots_to_new_session: false
+
+
