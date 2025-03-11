@@ -2,11 +2,21 @@ version: "3.1"
 #Historias
 stories:
 
-- story: Pedir datos
-  steps:
-  - or:
-    - intent: afirmar
-    - intent: dar_info_basica
-  - action: formulario_nombre_delegacion
-  - active_loop: null
+ - story: Saludar
+   steps:
+   - intent: saludar
+   - action: utter_hola
+  
+ - story: Hola con NOMBRE
+   steps:
+   - intent: saludar
+   - slot_was_set:
+     - nombre
+   - action: utter_hola_conociemiento
+  
+ - story: Nombre recibido
+   steps:
+    - intent: decir_nombre
+    - action: utter_hola_conociemiento
+
 

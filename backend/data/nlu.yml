@@ -1,125 +1,213 @@
 version: "3.1"
-#Aquí se describen las intenciones del usuario
-intents:
-  - afirmar
-  - negar
-  - bot_challenge
-  - saludar
-  - adios
-  - positivo
-  - basura
-  - imagen
-  - dar_info_basica
-
-
 nlu:
-  - intent: adios
-    examples: |
-      - hasta luego 
-      - chao
-      - nos vemos
-      - hasta la vista
-      - ya nos veremos
-      - adiós
-
-  - intent: afirmar
-    examples: |
-      - si
-      - s
-      - claro
-      - efectivamente
-      - obvio
-      - correcto
-      - perfect
-
-  - intent: negar
-    examples: |
-      - no
-      - n
-      - nunca
-      - nanai
-      - nope
-      - imposible
-      - ni de broma
-
-  - intent: bot_challenge
-    examples: |
-      - ¿Eres un Bot?
-      - ¿Eres humano?
-      - ¿Con quien hablo?
-      - ¿Estoy hablando con un humano?
-
-  - intent: saludar
-    examples: |
-      - Hola
-      - holaaaa
-      - Que tal
-      - Como andas
-      - Buenos días
-      - Buenas noches
-      - Buenas tardes
-
-  - intent: positivo
-    examples: |
-      - bien
-      - correcot
-      - positivo
-      - maravillosamente
-      - genial
-
-  - intent: basura
-    examples: |
-      - jdhfjkdsfhjksd
-      - asdjhkasdhkj
-      - ksdfjksdjfksdjf
-      - ajshdkjashdkjh
-      - qwertyuiop
-      - asdfghjkl
-      - zxcvbnm
-
-  - intent: imagen 
-    examples: |
-      - imagen
-      - img
-      - foto
-      - muestrame imagen
-      - enseñame foto
-
-
-  - intent: dar_info_basica 
-    examples: |
-      - [Madrid](delegacion)
-      - Trabajo en la delegación de [Madrid](delegacion)
-      - [Barcelona](delegacion)
-      - [Valladolid](delegacion)
-      - Estoy en [Burgos](delegacion)
-      - Mi delegacion es [Cordiba](delegacion)
-      - [Alicante](delegacion)
-      - [Sevilla](delegacion)
-      - [Merida](delegacion)
-      - [Santiago](delegacion)
-      - [Jaen](delegacion)
-      - [Almeria](delegacion)
-      - [Granada](delegacion)
-      - [Malaga](delegacion)
-      - [Portugal](delegacion)
-      - Me llamo [Manel](nombre)
-      - Mi nombre es [Laura](nombre)
-      - Soy [Carlos](nombre)
-      - [Ana](nombre)
-      - [Ignacio](nombre)
-      - [Sara](nombre)
-      - [Javier](nombre)
-      - [Marta](nombre)
-      - [Pablo](nombre)
-      - [Sofia](nombre)
-      - [Lucia](nombre)
-      - [David](nombre)
-      - [Maria](nombre)
-      - [Jose](nombre)
-      - [Laura](nombre)
-
-
-
-actions:
-  - utter_default
+- intent: adios
+  examples: |
+    - hasta luego
+    - chao
+    - nos vemos
+    - hasta la vista
+    - ya nos veremos
+    - adiós
+- intent: afirmar
+  examples: |
+    - si
+    - s
+    - claro
+    - efectivamente
+    - obvio
+    - correcto
+    - perfect
+    - por supuesto
+    - por supuestísimo
+    - por supuesto que sí
+    - afirmativo
+    - exacto
+    - siiiiiiii
+    - yess
+    - yep
+    - yes
+    - yeah
+    - y
+- intent: negar
+  examples: |
+    - no
+    - n
+    - nunca
+    - nanai
+    - nope
+    - imposible
+    - ni de broma
+    - not
+    - no way
+    - nein
+    - nooooooooo
+    - never
+- intent: bot_challenge
+  examples: |
+    - ¿Eres un Bot?
+    - ¿Eres humano?
+    - ¿Con quien hablo?
+    - ¿Estoy hablando con un humano?
+- intent: saludar
+  examples: |
+    - Hola
+    - holaaaa
+    - Que tal
+    - Como andas
+    - Buenos días
+    - Buenas noches
+    - Buenas tardes
+- intent: positivo
+  examples: |
+    - bien
+    - correcot
+    - positivo
+    - maravillosamente
+    - genial
+- intent: basura
+  examples: |
+    - jdhfjkdsfhjksd
+    - asdjhkasdhkj
+    - ksdfjksdjfksdjf
+    - ajshdkjashdkjh
+    - qwertyuiop
+    - asdfghjkl
+    - zxcvbnm
+- intent: imagen
+  examples: |
+    - imagen
+    - img
+    - foto
+    - muestrame imagen
+    - enseñame foto
+- intent: decir_delegacion
+  examples: |
+    - [Madrid](delegacion)
+    - Trabajo en la delegación de [Madrid](delegacion)
+    - [Barcelona](delegacion)
+    - [Valladolid](delegacion)
+    - Estoy en [Burgos](delegacion)
+    - Mi delegacion es [Cordiba](delegacion)
+    - [Alicante](delegacion)
+    - [Sevilla](delegacion)
+    - [Merida](delegacion)
+    - [Santiago](delegacion)
+    - [Jaen](delegacion)
+    - [Almeria](delegacion)
+    - [Granada](delegacion)
+    - [Malaga](delegacion)
+    - [Portugal](delegacion)
+- intent: decir_nombre
+  examples: |
+    - Me llamo [Manel](nombre)
+    - Mi nombre es [Laura](nombre)
+    - Soy [Carlos](nombre)
+    - [Ana](nombre)
+    - [Ignacio](nombre)
+    - [Sara](nombre)
+    - [Javier](nombre)
+    - [Marta](nombre)
+    - [Pablo](nombre)
+    - [Sofia](nombre)
+    - [Lucia](nombre)
+    - [David](nombre)
+    - [Maria](nombre)
+    - [Jose](nombre)
+    - [Laura](nombre)
+    - Me llamo [Alejandro](nombre)
+    - Mi nombre es [Beatriz](nombre)
+    - [Daniel](nombre)
+    - [Elena](nombre)
+    - [Fernando](nombre)
+    - [Gabriela](nombre)
+    - [Hugo](nombre)
+    - [Isabel](nombre)
+    - [Karla](nombre)
+    - [Luis](nombre)
+    - [Nerea](nombre)
+    - [Oscar](nombre)
+    - [Patricia](nombre)
+    - [Quintín](nombre)
+    - [Raúl](nombre)
+    - [Silvia](nombre)
+    - [Tomás](nombre)
+    - [Uxía](nombre)
+    - [Víctor](nombre)
+    - [Wanda](nombre)
+    - [xavier](nombre)
+    - [Yolanda](nombre)
+    - [Zoe](nombre)
+    - Me llamo [adrián](nombre)
+    - Mi nombre es [Blanca](nombre)
+    - Soy [Carmen](nombre)
+    - [Diego](nombre)
+    - [Eva](nombre)
+    - [Francisco](nombre)
+    - [gloria](nombre)
+    - [Héctor](nombre)
+    - [Irene](nombre)
+    - [Juan](nombre)
+    - [Kiko](nombre)
+    - [Lorena](nombre)
+    - [Manuel](nombre)
+    - [Natalia](nombre)
+    - [Olga](nombre)
+    - [quirino](nombre)
+    - [Rocío](nombre)
+    - [Sergio](nombre)
+    - [Teresa](nombre)
+    - [Úrsula](nombre)
+    - [Valentín](nombre)
+    - [Wilfredo](nombre)
+    - [Ximena](nombre)
+    - [Yeray](nombre)
+    - [Zaira](nombre)
+    - Me llamo [Antonio](nombre)
+    - Mi nombre es [Begoña](nombre)
+    - Soy [Cristina](nombre)
+    - [Domingo](nombre)
+    - [Esteban](nombre)
+    - [Fabiola](nombre)
+    - [Gonzalo](nombre)
+    - [Hilda](nombre)
+    - [Julia](nombre)
+    - [Kevin](nombre)
+    - [leonor](nombre)
+    - [Marcos](nombre)
+    - [Noelia](nombre)
+    - [Octavio](nombre)
+    - [paula](nombre)
+    - [Quintana](nombre)
+    - [Ramón](nombre)
+    - [Salvador](nombre)
+    - [Tamara](nombre)
+    - [Ulises](nombre)
+    - [vanesa](nombre)
+    - [Walter](nombre)
+    - [Xenia](nombre)
+    - [Yago](nombre)
+    - [Zulema](nombre)
+    - Me llamo [Andrés](nombre)
+    - Mi nombre es [Bárbara](nombre)
+    - Soy [Clara](nombre)
+    - [Damián](nombre)
+    - [Ezequiel](nombre)
+    - [Félix](nombre)
+    - [Guillermo](nombre)
+    - [Hana](nombre)
+    - [Iván](nombre)
+    - [Joaquín](nombre)
+    - [Karen](nombre)
+    - [Lidia](nombre)
+    - [Mateo](nombre)
+    - [Nicolás](nombre)
+    - [Orlando](nombre)
+    - [Pilar](nombre)
+    - [Quico](nombre)
+    - [Rubén](nombre)
+    - [Sandra](nombre)
+    - [Trinidad](nombre)
+    - [Ursula](nombre)
+    - [Vicente](nombre)
+    - me llamo [lola](nombre)
+    - me llamo [miercoles](nombre)

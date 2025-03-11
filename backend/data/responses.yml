@@ -13,7 +13,7 @@ responses:
   - text: "Hola, {nombre}."
 
   utter_hola:
-  - text: "Hola, ¿Podrias indicarme tu nombre?"
+  - text: "Hola"
 
   utter_alegrarse:
   - text: "Genial me alegro mucho."
@@ -22,7 +22,15 @@ responses:
   - text: "¿En qué puedo ayudarte {nombre}?"
 
   utter_default:
-  - text: "Lo siento, no te he entendido, ¿Podrias reformular tu pregunta?"
+  - text: "Lo siento, no te he entendido, puedo ayudarte con los siguientes problemas:\n
+           • Problemas de acceso a Viaweb / Padua\n
+           • Problemas con equipos o material informatico\n
+           • Problemas con impresoras\n
+           • Problemas con programas informaticos\n
+           • Grenerar tickets HelpDesk\n
+           • Consultar estado tickets HelpDesk\n
+           • Recuperar contraseñas de conductores\n
+           • Manuales tecnicos"
   
   utter_drop_imagen:
     #- text: "https://files.catbox.moe/83itdt.png"
