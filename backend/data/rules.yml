@@ -27,6 +27,14 @@ rules:
   - intent: imagen
   - action: utter_drop_imagen
 
+- rule: Hola con NOMBRE
+  condition:
+  - slot_was_set:
+      - nombre
+  steps:
+  - intent: saludar
+  - action: utter_hola_conociemiento
+
 
 
 

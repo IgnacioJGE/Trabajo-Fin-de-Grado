@@ -1,0 +1,77 @@
+version: "3.1"
+
+#Aquí describo las respuestas que dará el bot 
+
+responses:
+
+  utter_problema_raton:
+  - text: "Para resolver tu problema pueba lo siguiente:\n
+          - <strong>Si tu ratón es bluetooth</strong>\n
+            • Si el ratón falla prueba a cambiar el pincho del ratón de puerto USB. \n
+            • Comprueba si el ratón está encendido, con la pestaña que está en la parte inferior. \n
+            • Si al ponerlo en ON no sale una luz roja del lector puede que no tenga pila, prueba a ponerle una nueva. \n
+            • Prueba a reiniciar el ordenador para que se reestablezcan los puertos USB. \n
+          - <strong>Si tu ratón no es bluetooth</strong>\n
+            • Comprueba que esté conectado correctamente en el puerto USB. \n
+            • Prueba si  funciona en otros puertos USB. \n
+            • Reinicia el ordenador para que se reestablezcan los puertos USB.\n
+          Espero que hayas podido solucionar tu problema. De no ser así, ¿quieres poner un ticket en el HelpDesk?"
+
+  utter_problema_teclado:
+  - text: "Para resolver tu problema pueba lo siguiente:\n
+          - <strong>Si tu teclado es bluetooth</strong>\n
+            • Si el teclado falla prueba a cambiar el pincho de puerto USB. \n
+            • Comprueba si el teclado está encendido, con la pestaña que pone ON OFF. \n
+            • Si al ponerlo en ON no se enciende ninguna luz puede que no tenga pila, prueba a ponerle una nueva. \n
+            • Prueba a reiniciar el ordenador para que se reestablezcan los puertos USB. \n
+          - <strong>Si tu teclado no es bluetooth</strong>\n
+            • Comprueba que esté conectado correctamente en el puerto USB. \n
+            • Prueba si  funciona en otros puertos USB. \n
+            • Reinicia el ordenador para que se reestablezcan los puertos USB.\n
+          Espero que hayas podido solucionar tu problema. De no ser así, ¿quieres poner un ticket en el HelpDesk?"
+
+  utter_ordenador_lento:
+  - text: "Si tu ordenador va lento, prueba a hacer lo siguiente:\n
+          • Cierra las aplicaciones que no estés utilizando. \n
+          • Comprueba si tienes actualizaciones pendientes. \n
+          • Prueba a eliminar los archivos que no necesites y no sean importantes. \n
+          • Trata de cerrar todas las pestañas del navegador que no estés usando activamente. \n
+          • Si el problema persiste, reinicia el ordenador. \n
+          • Guarda tu trabajo y reinicia el ordenador. \n
+          Espero que hayas podido solucionar tu problema. De no ser así, ¿quieres poner un ticket en el HelpDesk?"
+
+  utter_trackpad_desactivado:
+  - text: "Para activar el panel tactil de tu ordenador sigue los siguientes pasos:\n
+          • Pulsa la tecla Fn y luego busca entre las teclas superiores una que tenga el icono del panel tactil y pulsala a la vez. \n
+          • Por ejemplo, en muchos portatiles HP, Lenovo o Asus, es Fn + F6 o Fn + F7. \n
+          • Si esto no te funcion haz clic en configurarción. \n
+          • Haz clic en Dispositiovos. \n
+          • Haz clic en panel táctil. \n
+          • Y finalmnente haz clic en Activar. \n
+          Espero que hayas podido solucionar tu problema. De no ser así, ¿quieres poner un ticket en el HelpDesk?"
+  
+  utter_problema_espacio_disco:
+  - text: "Para liberar espacio en tu disco duro sigue los siguientes pasos:\n
+          • Elimina archivos de la papelera de reciclaje. \n
+          • Desinstala programas que no utilices. \n
+          • Si esto no te ha funcionado prueba lo siguiente, haz click en el explorador de archivos. \n
+          • Haz click en elste equipo. \n
+          • Haz click derecho en el disco que no tenga espacio y selecciona propiedades. \n
+          • Haz click en liberar espacio. \n
+          • Finalmente selecciona los archivos que no necesites y haz click en aceptar. \n
+          Espero que hayas podido solucionar tu problema. De no ser así, ¿quieres poner un ticket en el HelpDesk?"
+
+
+utter_problema_correo_lleno:
+  - text: "Para liberar espacio en tu correo, sigue estos pasos:\n
+          • Elimina los correos que no necesites.\n
+          • Vacía la bandeja de spam.\n
+          • Borra los correos almacenados en la carpeta de borradores.\n
+          • Vacía la carpeta de elementos eliminados.\n
+          \n
+          Si el problema persiste, prueba lo siguiente:\n
+          • Crea una nueva carpeta en tu almacenamiento en línea.\n
+          • Mueve a esa carpeta los correos que desees conservar.\n
+          \n
+          Espero que esta solución te haya sido útil. Si el problema continúa, ¿te gustaría abrir un ticket en el HelpDesk?"
+

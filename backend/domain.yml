@@ -10,6 +10,14 @@ intents:
 - negar
 - positivo
 - saludar
+- problema_raton
+- problema_teclado
+- ordenador_lento
+- trackpad_desactivado
+- problema_espacio_disco
+- problema_correo_lleno
+
+
 entities:
 - nombre
 - delegacion

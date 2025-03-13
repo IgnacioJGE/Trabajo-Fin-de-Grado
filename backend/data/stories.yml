@@ -2,21 +2,60 @@ version: "3.1"
 #Historias
 stories:
 
- - story: Saludar
-   steps:
-   - intent: saludar
-   - action: utter_hola
-  
- - story: Hola con NOMBRE
-   steps:
-   - intent: saludar
-   - slot_was_set:
-     - nombre
-   - action: utter_hola_conociemiento
-  
- - story: Nombre recibido
-   steps:
+  - story: Saludar
+    steps:
+    - intent: saludar
+    - action: utter_hola
+
+  - story: Nombre recibido
+    steps:
     - intent: decir_nombre
     - action: utter_hola_conociemiento
+  
+  # CUANDO EL PROBLEMA SE HA SOLUCIONADO 
 
+  - story: Problema con el ratón solucionado #RATON
+    steps:
+    - intent: problema_raton
+    - action: utter_problema_raton
+    - intent: negar
+    - action: utter_alegrarse
+  
+  - story: Problema con el teclado solucionado #TECLADO
+    steps:
+    - intent: problema_teclado
+    - action: utter_problema_teclado
+    - intent: negar
+    - action: utter_alegrarse
+  
+  - story: Ordenador lento solucionado #ORDENADOR LENTO
+    steps:
+    - intent: ordenador_lento
+    - action: utter_ordenador_lento
+    - intent: negar
+    - action: utter_alegrarse
+  
+  - story: Trackpad desactivado solucionado #TRACKPAD
+    steps:
+    - intent: trackpad_desactivado
+    - action: utter_trackpad_desactivado
+    - intent: negar
+    - action: utter_alegrarse
+  
+  - story: Problema con el espacio en disco solucionado #ESPACIO EN DISCO
+    steps:
+    - intent: problema_espacio_disco
+    - action: utter_problema_espacio_disco
+    - intent: negar
+    - action: utter_alegrarse
+  
+  - story: Problema con el correo lleno solucionado #CORREO LLENO
+    steps:
+    - intent: problema_correo_lleno
+    - action: utter_problema_correo_lleno
+    - intent: negar
+    - action: utter_alegrarse
+  
+
+  # CUANDO EL PROBLEMA NO SE HA SOLUCIONADO
 

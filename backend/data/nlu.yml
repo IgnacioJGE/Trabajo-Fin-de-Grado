@@ -97,6 +97,7 @@ nlu:
     - [Granada](delegacion)
     - [Malaga](delegacion)
     - [Portugal](delegacion)
+
 - intent: decir_nombre
   examples: |
     - Me llamo [Manel](nombre)
@@ -211,3 +212,6 @@ nlu:
     - [Vicente](nombre)
     - me llamo [lola](nombre)
     - me llamo [miercoles](nombre)
+
+
+

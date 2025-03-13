@@ -1,0 +1,96 @@
+nlu: 
+- intent: problema_raton
+  examples: |
+    - Mi ratón no funciona
+    - Problemas con el ratón
+    - El ratón no responde
+    - No puedo usar el ratón
+    - El ratón no se mueve
+    - El ratón no se desplaza
+    - Estoy teniendo problemas con el mouse
+    - Me falla el raton 
+    - Estoy teniendo un problema, porque mi raton no funciona bien
+    - El raton me hace una cosa rara da como saltos
+    - El raton esta loco
+
+- intent: problema_teclado
+  examples: |
+    - Mi teclado no funciona
+    - Problemas con el teclado
+    - El teclado no responde
+    - No puedo usar el teclado
+    - El teclado no escribe
+    - El teclado no escribe nada
+    - Estoy teniendo problemas con el teclado
+    - Me falla el teclado
+    - Fallo teclas
+    - error teclado
+    - teclas no funcionan
+    - teclado no escribe
+    - Estoy teniendo problemas con mi teclado porqu eme faltan algunas teclas
+    - Me falla una tecla de mi teclado 
+    - Me falla la tecla mayusculas del teclado
+
+- intent: ordenador_lento
+  examples: |
+    - Mi ordenador va lento
+    - Problemas de velocidad
+    - El ordenador va muy lento
+    - El ordenador no responde
+    - Estoy teniendo problemas con la velocidad del ordenador
+    - Fallo ordenador lentitud
+    - error ordenador lento
+    - Tengo un problema, el portatil me va muy lento
+    - mi portatil va extremadamente lento 
+    - no me caga bien las aplicaciones de mi ordenador
+    - no se por que mi ordenador va tan despacio
+
+- intent: trackpad_desactivado 
+  examples: |
+    - Mi trackpad no funciona
+    - Problemas con el trackpad
+    - El trackpad no responde
+    - No puedo usar el trackpad
+    - El trackpad no se mueve
+    - El trackpad no se desplaza
+    - Estoy teniendo problemas con el trackpad
+    - Me falla el trackpad
+    - Fallo trackpad
+    - error trackpad
+    - error panel tactil
+    - problemas con el touchpad
+    - Estoy teniendo un problema, porque el touchpad de mi ordenador no funciona
+    - El panel tactil de mi ordenador no se mueve 
+    - el touchpad del ordenador va mal 
+    - tengo un problema con el panel tactil de mi portail va mal
+  
+- intent: problema_espacio_disco
+  examples: |
+    - Mi disco duro está lleno
+    - Problemas con el espacio en disco
+    - No tengo espacio en disco
+    - El disco duro está lleno
+    - Estoy teniendo problemas con el espacio en disco
+    - Fallo espacio disco
+    - error espacio disco
+    - disco duro lleno
+    - no tengo espacio en el disco duro
+    - no tengo espacio en el disco
+    - no tengo hueco en mi ordenador 
+    - Estoy teniendo muchos problemas porque el disco de mi ordenador esta lleno 
+  
+- intent: problema_correo_lleno
+  examples: |
+    - Mi correo está lleno
+    - Problemas con el correo
+    - No tengo espacio en el correo
+    - El correo está lleno
+    - Estoy teniendo problemas con el espacio en el correo
+    - Fallo espacio correo
+    - error espacio correo
+    - correo lleno
+    - no tengo espacio en el correo
+    - no tengo espacio en el correo
+    - no tengo hueco en mi correo
+    - Estoy teniendo muchos problemas porque el correo esta lleno
+  
