@@ -1,96 +1,123 @@
 nlu: 
 - intent: problema_raton
   examples: |
-    - Mi ratón no funciona
-    - Problemas con el ratón
-    - El ratón no responde
-    - No puedo usar el ratón
-    - El ratón no se mueve
-    - El ratón no se desplaza
-    - Estoy teniendo problemas con el mouse
-    - Me falla el raton 
-    - Estoy teniendo un problema, porque mi raton no funciona bien
-    - El raton me hace una cosa rara da como saltos
-    - El raton esta loco
+    - [Mi ratón no funciona](problema)
+    - [Problemas con el ratón](problema)
+    - [El ratón no responde](problema)
+    - [No puedo usar el ratón](problema)
+    - [El ratón no se mueve](problema)
+    - [El ratón no se desplaza](problema)
+    - [Estoy teniendo problemas con el mouse](problema)
+    - [Me falla el ratón](problema)
+    - [Estoy teniendo un problema, porque mi ratón no funciona bien](problema)
+    - [El ratón me hace una cosa rara, da como saltos](problema)
+    - [El ratón está loco](problema)
+
 
 - intent: problema_teclado
   examples: |
-    - Mi teclado no funciona
-    - Problemas con el teclado
-    - El teclado no responde
-    - No puedo usar el teclado
-    - El teclado no escribe
-    - El teclado no escribe nada
-    - Estoy teniendo problemas con el teclado
-    - Me falla el teclado
-    - Fallo teclas
-    - error teclado
-    - teclas no funcionan
-    - teclado no escribe
-    - Estoy teniendo problemas con mi teclado porqu eme faltan algunas teclas
-    - Me falla una tecla de mi teclado 
-    - Me falla la tecla mayusculas del teclado
+    - [Mi teclado no funciona](problema)
+    - [Problemas con el teclado](problema)
+    - [El teclado no responde](problema)
+    - [No puedo usar el teclado](problema)
+    - [El teclado no escribe](problema)
+    - [El teclado no escribe nada](problema)
+    - [Estoy teniendo problemas con el teclado](problema)
+    - [Me falla el teclado](problema)
+    - [Fallo teclas](problema)
+    - [Error teclado](problema)
+    - [Teclas no funcionan](problema)
+    - [Teclado no escribe](problema)
+    - [Estoy teniendo problemas con mi teclado porque me faltan algunas teclas](problema)
+    - [Me falla una tecla de mi teclado](problema)
+    - [Me falla la tecla mayúsculas del teclado](problema)
+
 
 - intent: ordenador_lento
   examples: |
-    - Mi ordenador va lento
-    - Problemas de velocidad
-    - El ordenador va muy lento
-    - El ordenador no responde
-    - Estoy teniendo problemas con la velocidad del ordenador
-    - Fallo ordenador lentitud
-    - error ordenador lento
-    - Tengo un problema, el portatil me va muy lento
-    - mi portatil va extremadamente lento 
-    - no me caga bien las aplicaciones de mi ordenador
-    - no se por que mi ordenador va tan despacio
+    - [Mi ordenador va lento](problema)
+    - [Problemas de velocidad](problema)
+    - [El ordenador va muy lento](problema)
+    - [El ordenador no responde](problema)
+    - [Estoy teniendo problemas con la velocidad del ordenador](problema)
+    - [Fallo ordenador lentitud](problema)
+    - [Error ordenador lento](problema)
+    - [Tengo un problema, el portátil me va muy lento](problema)
+    - [Mi portátil va extremadamente lento](problema)
+    - [No me carga bien las aplicaciones de mi ordenador](problema)
+    - [No sé por qué mi ordenador va tan despacio](problema)
 
-- intent: trackpad_desactivado 
+
+- intent: trackpad_desactivado
   examples: |
-    - Mi trackpad no funciona
-    - Problemas con el trackpad
-    - El trackpad no responde
-    - No puedo usar el trackpad
-    - El trackpad no se mueve
-    - El trackpad no se desplaza
-    - Estoy teniendo problemas con el trackpad
-    - Me falla el trackpad
-    - Fallo trackpad
-    - error trackpad
-    - error panel tactil
-    - problemas con el touchpad
-    - Estoy teniendo un problema, porque el touchpad de mi ordenador no funciona
-    - El panel tactil de mi ordenador no se mueve 
-    - el touchpad del ordenador va mal 
-    - tengo un problema con el panel tactil de mi portail va mal
-  
+    - [Mi trackpad no funciona](problema)
+    - [Problemas con el trackpad](problema)
+    - [El trackpad no responde](problema)
+    - [No puedo usar el trackpad](problema)
+    - [El trackpad no se mueve](problema)
+    - [El trackpad no se desplaza](problema)
+    - [Estoy teniendo problemas con el trackpad](problema)
+    - [Me falla el trackpad](problema)
+    - [Fallo trackpad](problema)
+    - [Error trackpad](problema)
+    - [Error panel táctil](problema)
+    - [Problemas con el touchpad](problema)
+    - [Estoy teniendo un problema, porque el touchpad de mi ordenador no funciona](problema)
+    - [El panel táctil de mi ordenador no se mueve](problema)
+    - [El touchpad del ordenador va mal](problema)
+    - [Tengo un problema con el panel táctil de mi portátil que va mal](problema)
+
 - intent: problema_espacio_disco
   examples: |
-    - Mi disco duro está lleno
-    - Problemas con el espacio en disco
-    - No tengo espacio en disco
-    - El disco duro está lleno
-    - Estoy teniendo problemas con el espacio en disco
-    - Fallo espacio disco
-    - error espacio disco
-    - disco duro lleno
-    - no tengo espacio en el disco duro
-    - no tengo espacio en el disco
-    - no tengo hueco en mi ordenador 
-    - Estoy teniendo muchos problemas porque el disco de mi ordenador esta lleno 
-  
+    - [Mi disco duro está lleno](problema)
+    - [Problemas con el espacio en disco](problema)
+    - [No tengo espacio en disco](problema)
+    - [El disco duro está lleno](problema)
+    - [Estoy teniendo problemas con el espacio en disco](problema)
+    - [Fallo espacio disco](problema)
+    - [Error espacio disco](problema)
+    - [Disco duro lleno](problema)
+    - [No tengo espacio en el disco duro](problema)
+    - [No tengo espacio en el disco](problema)
+    - [No tengo hueco en mi ordenador](problema)
+    - [Estoy teniendo muchos problemas porque el disco de mi ordenador está lleno](problema)
+
 - intent: problema_correo_lleno
   examples: |
-    - Mi correo está lleno
-    - Problemas con el correo
-    - No tengo espacio en el correo
-    - El correo está lleno
-    - Estoy teniendo problemas con el espacio en el correo
-    - Fallo espacio correo
-    - error espacio correo
-    - correo lleno
-    - no tengo espacio en el correo
-    - no tengo espacio en el correo
-    - no tengo hueco en mi correo
-    - Estoy teniendo muchos problemas porque el correo esta lleno
-  
+    - [Mi correo está lleno](problema)
+    - [Problemas con el correo](problema)
+    - [No tengo espacio en el correo](problema)
+    - [El correo está lleno](problema)
+    - [Estoy teniendo problemas con el espacio en el correo](problema)
+    - [Fallo espacio correo](problema)
+    - [Error espacio correo](problema)
+    - [Correo lleno](problema)
+    - [No tengo espacio en el correo](problema)
+    - [Correo lleno](problema)
+    - [No tengo hueco en mi correo](problema)
+    - [Estoy teniendo muchos problemas porque el correo está lleno](problema)
+    - [No puedo recibir correos porque mi bandeja de entrada está llena](problema)
+    - [No puedo recibir correos porque mi bandeja de entrada está llena](problema)
+
+- intent: problema_etiquetadoras
+  examples: |
+    - [Problemas con la etiquetadora](problema)
+    - [La etiquetadora no funciona](problema)
+    - [No puedo usar la etiquetadora](problema)
+    - [La etiquetadora no imprime](problema)
+    - [Estoy teniendo problemas con la etiquetadora](problema)
+    - [Fallo etiquetadora](problema)
+    - [Error etiquetadora](problema)
+    - [Etiquetadora no imprime](problema)
+    - [No puedo imprimir con la etiquetadora](problema)
+    - [No puedo imprimir etiquetas](problema)
+    - [No puedo imprimir etiquetas con la etiquetadora](problema)
+    - [Estoy teniendo problemas con la etiquetadora porque no imprime](problema)
+    - [La etiquetadora no imprime etiquetas](problema)
+    - [La etiquetadora no imprime las etiquetas](problema)
+    - [La etiquetadora no imprime las etiquetas correctamente](problema)
+    - [La etiquetadora no imprime las etiquetas bien](problema)
+    - [La etiquetadora no imprime las etiquetas como debería](problema)
+    - [La etiquetadora no imprime las etiquetas como toca](problema)
+    - [La etiquetadora no imprime las etiquetas como es debido](problema)
+    - [La etiquetadora no imprime las etiquetas como es correcto](problema)

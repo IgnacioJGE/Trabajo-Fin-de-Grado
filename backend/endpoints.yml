@@ -11,7 +11,7 @@
 # https://rasa.com/docs/rasa/custom-actions
 
 action_endpoint:
-  url: "http://localhost:5055/webhook"
+  url: "http://192.168.56.1:5055/webhook"
 
 tracker_store: # con esto permite guardar las conversaciones para estudiarlas
   type: SQL

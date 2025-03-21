@@ -14,10 +14,11 @@
   }
 }
 
-body {
+html,body {
   color: var(--foreground);
-  padding: 1rem;
+  padding: 0;
   font-family: Arial, Helvetica, sans-serif;
+  height: 100%;
 }
 .message-container {
   min-width: 43vw; /* Tamaño fijo para pantallas grandes */
@@ -33,6 +34,16 @@ body {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column-reverse;
+}
+.message-container::-webkit-scrollbar {
+  width: 0; /* Oculta la barra de desplazamiento vertical */
+  height: 0; /* Oculta la barra de desplazamiento horizontal */
+}
+.message-container {
+  scrollbar-width: none; /* Firefox */
+}
+.message-container {
+  -ms-overflow-style: none; /* Internet Explorer y Edge */
 }
 
 .text-right-box, .text-left-box {
@@ -78,6 +89,8 @@ body {
   text-align: left;
   overflow-x: auto;
   margin: 5px 0;
+  flex-shrink: 1;
+
 }
 
 .imagenbutton {
@@ -88,6 +101,8 @@ body {
   height: 6vh;
   border: none;
   cursor: pointer;
+  flex-shrink: 1;
+
 }
 
 .contenedor-inputs {
@@ -97,6 +112,8 @@ body {
   justify-content: flex-end;
   gap: 1vw;
   margin-top: 1vw;
+  flex-shrink: 1;
+
 }
 
 .contenedor-principal {
@@ -109,8 +126,19 @@ body {
   background-color: #fff;
   width: 50vw;
   max-height: 95vh;
-  margin: auto;
+  margin-left: auto; /* Centra el contenedor horizontalmente */
+  margin-right: auto; /* Centra el contenedor horizontalmente */
   overflow: hidden;
+}
+.contendor-global{
+  background-image: url("/recursos/LOGONARVAL.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center center; /* Centra la imagen */
+  width: 100vw; /* Asegura que ocupe todo el ancho de la pantalla */
+  height: 100vh;
+  align-items: center;
+  display: flex;
 }
 
 /* Media Query para pantallas pequeñas */

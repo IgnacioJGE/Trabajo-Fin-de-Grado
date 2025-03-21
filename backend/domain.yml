@@ -16,15 +16,27 @@ intents:
 - trackpad_desactivado
 - problema_espacio_disco
 - problema_correo_lleno
-
+- problema_etiquetadoras
+- crear_ticket
+- no_ticket_helpdesk
+- porblema_tipo_solicitud
+- decir_importancia
+- decir_departamento
+- decir_email
 
 entities:
 - nombre
 - delegacion
+- problema
+- email
+- departamento
+- tipo_solicitud
+- importancia
+
 slots:
   nombre:
     type: text
-    influence_conversation: true
+    influence_conversation: false
     mappings:
     - type: from_entity
       entity: nombre
@@ -32,10 +44,59 @@ slots:
 
   delegacion:
     type: text
-    influence_conversation: true
+    influence_conversation: false
     mappings:
     - type: from_entity
       entity: delegacion
+  
+  email:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: email
+
+  problema:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: problema
+  
+  departamento:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: departamento
+  
+  tipo_solicitud:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: tipo_solicitud
+  
+  importancia:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: importancia
+forms:
+  form_helpedesk:
+    required_slots:
+      - nombre
+      - delegacion
+      - departamento
+      - email
+      - tipo_solicitud
+      - importancia
+
+actions:
+ - action_crear_entrada_sharepoint
+ - action_guardar_problema
+ - action_saludar_personalizado
       
 session_config:
   session_expiration_time: 30

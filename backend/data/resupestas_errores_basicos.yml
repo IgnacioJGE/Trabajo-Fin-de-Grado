@@ -62,7 +62,7 @@ responses:
           Espero que hayas podido solucionar tu problema. De no ser así, ¿quieres poner un ticket en el HelpDesk?"
 
 
-utter_problema_correo_lleno:
+  utter_problema_correo_lleno:
   - text: "Para liberar espacio en tu correo, sigue estos pasos:\n
           • Elimina los correos que no necesites.\n
           • Vacía la bandeja de spam.\n
@@ -75,3 +75,19 @@ utter_problema_correo_lleno:
           \n
           Espero que esta solución te haya sido útil. Si el problema continúa, ¿te gustaría abrir un ticket en el HelpDesk?"
 
+
+  utter_problema_etiquetadoras:
+  - text: "Si tienes problemas con la etiquetadora, sigue estos pasos:\n
+          • Si va lento: No poner muchas etiquetas de bulto en cola (las pequeñas).\n
+          • Si no encuentra la impresora:\n
+              - Comprobar que la impresora esté conectada.\n
+              - Sacar una página de prueba en Windows 10: \n
+              Configuración > Dispositivos > Impresoras y escáneres > Seleccionar la impresora > Administrar > Imprimir página de prueba.\n
+          • Si imprime bien, pero en Padua no:\n
+              - Ir a Padua al punto 13.1.4 **Selección de impresoras**.\n
+              - Hacer clic en 'Cambiar', luego 'Aceptar' y repetir este paso una vez más.\n
+              - Al imprimir, debería permitir seleccionar la etiquetadora.\n
+          • Si no imprime la página de prueba, abre un ticket.\n
+          • Si la etiquetadora está conectada a otro equipo comprueba que el equipo en el que está conectada uan sesión iniciada.\n
+          \n
+          Espero que esta solución te haya sido útil. Si el problema continúa, ¿te gustaría abrir un ticket en el HelpDesk?"

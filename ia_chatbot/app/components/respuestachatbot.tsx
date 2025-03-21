@@ -3,13 +3,11 @@ import axios from "axios";
 
 async function respuestachatbot(mensaje: string,sesion: string) {
   try {
- 
-        const response = await axios.post('http://192.168.128.82:5005/webhooks/rest/webhook', {
+        const response = await axios.post('http://127.0.0.1:5005/webhooks/rest/webhook', {
         sender: sesion,
         message: mensaje, 
       });
     if (response.data && response.data.length > 0) {
-
       return response.data[0].text || "Sin respuesta";
     } else {
       return "Sin respuesta del chatbot";

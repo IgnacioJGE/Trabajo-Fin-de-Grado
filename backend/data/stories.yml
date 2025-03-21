@@ -1,19 +1,16 @@
 version: "3.1"
 #Historias
 stories:
-
-  - story: Saludar
-    steps:
-    - intent: saludar
-    - action: utter_hola
-
   - story: Nombre recibido
     steps:
     - intent: decir_nombre
     - action: utter_hola_conociemiento
   
   # CUANDO EL PROBLEMA SE HA SOLUCIONADO 
-
+  - story: Saludar
+    steps:
+    - intent: saludar
+    - action: action_saludar_personalizado
   - story: Problema con el ratón solucionado #RATON
     steps:
     - intent: problema_raton
@@ -56,6 +53,12 @@ stories:
     - intent: negar
     - action: utter_alegrarse
   
-
+  - story: Problema con etiquetadoras solucionado #ETIQUETADORAS
+    steps:
+    - intent: problema_etiquetadoras
+    - action: utter_problema_etiquetadoras
+    - intent: negar
+    - action: utter_alegrarse
+  
   # CUANDO EL PROBLEMA NO SE HA SOLUCIONADO
 

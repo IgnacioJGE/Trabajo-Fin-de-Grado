@@ -13,22 +13,25 @@ assistant_id: 20250211-155603-cream-plan
 language: "es"
 
 pipeline:
-- name: WhitespaceTokenizer  # Divide las palabras por espacios
-- name: RegexFeaturizer  # Extrae patrones como números o correos
-- name: LexicalSyntacticFeaturizer  # Usa prefijos, sufijos y características léxicas
-- name: CountVectorsFeaturizer  # Representación basada en palabras
-- name: CountVectorsFeaturizer  # Representación basada en n-gramas de caracteres
-  analyzer: "char_wb"
-  min_ngram: 1
-  max_ngram: 4
-- name: DIETClassifier  # Modelo principal de Rasa para clasificar intenciones y entidades
-  epochs: 100
-- name: EntitySynonymMapper  # Mapea sinónimos para entidades (ej. "José" = "Pepe")
-- name: ResponseSelector  # Maneja FAQs y respuestas predefinidas
-  epochs: 100
-- name: FallbackClassifier  # Maneja respuestas inciertas
-  threshold: 0.75  # Se activa si la confianza es menor al 75%
-  ambiguity_threshold: 0.2  # Mayor tolerancia a intenciones similares
+  - name: WhitespaceTokenizer
+  - name: RegexFeaturizer
+  - name: LexicalSyntacticFeaturizer
+  - name: CountVectorsFeaturizer
+    analyzer: "char_wb"
+    min_ngram: 1
+    max_ngram: 6
+  - name: RegexEntityExtractor
+    use_lookup_tables: True 
+  - name: DIETClassifier
+    epochs: 100
+    entity_recognition: True
+  - name: EntitySynonymMapper
+  - name: ResponseSelector
+    epochs: 100
+  - name: FallbackClassifier
+    threshold: 0.7
+    ambiguity_threshold: 0.2
+
 
 # Configuration for Rasa Core.
 # https://rasa.com/docs/rasa/core/policies/

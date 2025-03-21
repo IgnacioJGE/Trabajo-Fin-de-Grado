@@ -1,0 +1,976 @@
+nlu:
+- lookup: nombre
+  examples: |
+    - Ximena
+    - Manel
+    - Laura
+    - Carlos
+    - Ana
+    - Ignacio
+    - Sara
+    - Javier
+    - Marta
+    - Pablo
+    - Sofia
+    - Lucia
+    - David
+    - Maria
+    - Jose
+    - Laura
+    - Alejandro
+    - Beatriz
+    - Daniel
+    - Elena
+    - Fernando
+    - Gabriela
+    - Hugo
+    - Isabel
+    - Karla
+    - Luis
+    - Nerea
+    - Álvaro
+    - Patricia
+    - Juan
+    - Carmen
+    - Antonio
+    - Rosa
+    - Francisco
+    - Yolanda
+    - Rafael
+    - Teresa
+    - Ricardo
+    - Aitor
+    - Vanessa
+    - Andrés
+    - Raquel
+    - Javier
+    - Pilar
+    - Teresa
+    - Oscar
+    - Sandra
+    - Juanita
+    - Tomás
+    - Sonia
+    - Jorge
+    - Beatriz
+    - Iván
+    - Gabriela
+    - Rubén
+    - Miriam
+    - Luis
+    - Adrián
+    - Raúl
+    - Catalina
+    - David
+    - Andrea
+    - Martina
+    - Victoria
+    - Félix
+    - Diana
+    - Mariana
+    - Francisco
+    - Ricardo
+    - Rosa
+    - Cristina
+    - Isabel
+    - Guillermo
+    - Alberto
+    - Inés
+    - Héctor
+    - Claudia
+    - Héctor
+    - Sergio
+    - Lorena
+    - Martín
+    - Verónica
+    - Aroa
+    - Lidia
+    - Marcos
+    - Luisana
+    - Elena
+    - Nicolás
+    - Sergio
+    - Eva
+    - Martín
+    - Mariana
+    - Javier
+    - Rosa
+    - Isabel
+    - Salma
+    - Oscar
+    - Mercedes
+    - Manuel
+    - Gabriel
+    - David
+    - Valentina
+    - Luis
+    - Javier
+    - Fernando
+    - Beatriz
+    - Jordi
+    - Elena
+    - Julio
+    - Esteban
+    - Emma
+    - Hugo
+    - Susana
+    - Samuel
+    - César
+    - Carla
+    - Oscar
+    - Francisco
+    - Lucía
+    - Rosa
+    - Sergio
+    - Marta
+    - Adriana
+    - Clara
+    - Felipe
+    - María José
+    - Pablo
+    - Elena
+    - Federico
+    - Laura
+    - Julio
+    - Daniel
+    - Sonia
+    - Guillermo
+    - Valentín
+    - Raquel
+    - Martina
+    - Gerardo
+    - Violeta
+    - Andrea
+    - Sandra
+    - Luis
+    - Carmen
+    - Juan
+    - Guillermo
+    - Ana
+    - José Luis
+    - José Antonio
+    - Guillermo
+    - Joaquín
+    - Hugo
+    - Amparo
+    - Juan Francisco
+    - Guillermo
+    - Alejandro
+    - Lorena
+    - Antonio José
+    - Beatriz
+    - Juan Manuel
+    - Aitana
+    - Esteban
+    - Miguel Ángel
+    - Francisco Javier
+    - José María
+    - Patricia
+    - Claudia
+    - Isabel
+    - Lorena
+    - Mercedes
+    - Rodrigo
+    - Carmen
+    - Alejandro
+    - Pedro
+    - Gonzalo
+    - Sara
+    - Valeria
+    - Rodrigo
+    - Alfonso
+    - Alberto
+    - Beatriz
+    - Elena
+    - Ricardo
+    - Antonio
+    - Lourdes
+    - Raquel
+    - Javier
+    - Teresa
+    - Julia
+    - Ángela
+    - Iván
+    - Celia
+    - Roberto
+    - Ángel
+    - Emilio
+    - Luis Miguel
+    - Mónica
+    - Marta
+    - Raquel
+    - Carlos
+    - María Pilar
+    - Clara
+    - Jaime
+    - Mario
+    - Paco
+    - Laura
+    - Enrique
+    - Teresa
+    - Álex
+    - Silvia
+    - Natalia
+    - Mario
+    - José Antonio
+    - Marta
+    - Sergio
+    - Silvia
+    - Alberto
+    - Rafael
+    - Ángeles
+    - Emma
+    - Iván
+    - Elsa
+    - María Ángeles
+    - Iván
+    - Enrique
+    - Alberto
+    - Teresa
+    - José Antonio
+    - Antonio
+    - Jorge Luis
+    - Carmen
+    - Ángel
+    - María José
+    - Belén
+    - Marta
+    - Jesús
+    - Alba
+    - Carolina
+    - Vicente
+    - Miriam
+    - Carlos
+    - Patricia
+    - Julia
+    - Enrique
+    - Javier
+    - Beatriz
+    - Manuel
+    - Laura
+    - Rodrigo
+    - Marcos
+    - Mario
+    - Lourdes
+    - Rosa
+    - Raúl
+    - Silvia
+    - Francisco
+    - José María
+    - Natalia
+    - Fernando
+    - Paco
+    - Teresa
+    - Miguel
+    - Sergio
+    - Félix
+    - Raúl
+    - Alba
+    - Marta
+    - Hugo
+    - Héctor
+    - Teresa
+    - Antonia
+    - Jesús
+    - Jesús
+    - Manel
+    - Laura
+    - Carlos
+    - Ana
+    - Ignacio
+    - Sara
+    - Javier
+    - Marta
+    - Pablo
+    - Sofia
+    - Lucia
+    - David
+    - Maria
+    - Jose
+    - Laura
+    - Alejandro
+    - Beatriz
+    - Daniel
+    - Elena
+    - Fernando
+    - Gabriela
+    - Hugo
+    - Isabel
+    - Karla
+    - Luis
+    - Nerea
+    - Álvaro
+    - Patricia
+    - Juan
+    - Carmen
+    - Antonio
+    - Rosa
+    - Francisco
+    - Yolanda
+    - Rafael
+    - Teresa
+    - Ricardo
+    - Aitor
+    - Vanessa
+    - Andrés
+    - Raquel
+    - Javier
+    - Pilar
+    - Teresa
+    - Oscar
+    - Sandra
+    - Juanita
+    - Tomás
+    - Sonia
+    - Jorge
+    - Beatriz
+    - Iván
+    - Gabriela
+    - Rubén
+    - Miriam
+    - Luis
+    - Adrián
+    - Raúl
+    - Catalina
+    - David
+    - Andrea
+    - Martina
+    - Victoria
+    - Félix
+    - Diana
+    - Mariana
+    - Francisco
+    - Ricardo
+    - Rosa
+    - Cristina
+    - Isabel
+    - Guillermo
+    - Alberto
+    - Inés
+    - Héctor
+    - Claudia
+    - Héctor
+    - Sergio
+    - Lorena
+    - Martín
+    - Verónica
+    - Aroa
+    - Lidia
+    - Marcos
+    - Luisana
+    - Elena
+    - Nicolás
+    - Sergio
+    - Eva
+    - Martín
+    - Mariana
+    - Javier
+    - Rosa
+    - Isabel
+    - Salma
+    - Oscar
+    - Mercedes
+    - Manuel
+    - Gabriel
+    - David
+    - Valentina
+    - Luis
+    - Javier
+    - Fernando
+    - Beatriz
+    - Jordi
+    - Elena
+    - Julio
+    - Esteban
+    - Emma
+    - Hugo
+    - Susana
+    - Samuel
+    - César
+    - Carla
+    - Oscar
+    - Francisco
+    - Lucía
+    - Rosa
+    - Sergio
+    - Marta
+    - Adriana
+    - Clara
+    - Felipe
+    - María José
+    - Pablo
+    - Elena
+    - Federico
+    - Laura
+    - Julio
+    - Daniel
+    - Sonia
+    - Guillermo
+    - Valentín
+    - Raquel
+    - Martina
+    - Gerardo
+    - Violeta
+    - Andrea
+    - Sandra
+    - Luis
+    - Carmen
+    - Juan
+    - Guillermo
+    - Ana
+    - José Luis
+    - José Antonio
+    - Guillermo
+    - Joaquín
+    - Hugo
+    - Amparo
+    - Juan Francisco
+    - Guillermo
+    - Alejandro
+    - Lorena
+    - Antonio José
+    - Beatriz
+    - Juan Manuel
+    - Aitana
+    - Esteban
+    - Miguel Ángel
+    - Francisco Javier
+    - José María
+    - Patricia
+    - Claudia
+    - Isabel
+    - Lorena
+    - Mercedes
+    - Rodrigo
+    - Carmen
+    - Alejandro
+    - Pedro
+    - Gonzalo
+    - Sara
+    - Valeria
+    - Rodrigo
+    - Alfonso
+    - Alberto
+    - Beatriz
+    - Elena
+    - Ricardo
+    - Antonio
+    - Lourdes
+    - Raquel
+    - Javier
+    - Teresa
+    - Julia
+    - Ángela
+    - Iván
+    - Celia
+    - Roberto
+    - Ángel
+    - Emilio
+    - Luis Miguel
+    - Mónica
+    - Marta
+    - Raquel
+    - Carlos
+    - María Pilar
+    - Clara
+    - Jaime
+    - Mario
+    - Paco
+    - Laura
+    - Enrique
+    - Teresa
+    - Álex
+    - Silvia
+    - Natalia
+    - Mario
+    - José Antonio
+    - Marta
+    - Sergio
+    - Silvia
+    - Alberto
+    - Rafael
+    - Ángeles
+    - Emma
+    - Iván
+    - Elsa
+    - María Ángeles
+    - Iván
+    - Enrique
+    - Alberto
+    - Teresa
+    - José Antonio
+    - Antonio
+    - Jorge Luis
+    - Carmen
+    - Ángel
+    - María José
+    - Belén
+    - Marta
+    - Jesús
+    - Alba
+    - Carolina
+    - Vicente
+    - Miriam
+    - Carlos
+    - Patricia
+    - Julia
+    - Enrique
+    - Javier
+    - Beatriz
+    - Manuel
+    - Laura
+    - Rodrigo
+    - Marcos
+    - Mario
+    - Lourdes
+    - Rosa
+    - Raúl
+    - Silvia
+    - Francisco
+    - José María
+    - Natalia
+    - Fernando
+    - Paco
+    - Teresa
+    - Miguel
+    - Sergio
+    - Félix
+    - Raúl
+    - Alba
+    - Marta
+    - Hugo
+    - Héctor
+    - Teresa
+    - Antonia
+    - Jesús
+    - pedro
+    - claudia
+    - carlota
+    - maria
+    - juan
+    - luis
+    - carlos
+    - jeickon
+    - marta
+    - raúl
+    - césar
+    - elena
+    - lucas
+    - marcos
+    - carlos
+    - marta
+    - alicia
+    - daniela
+    - juan
+    - tomás
+    - ricardo
+    - sandra
+    - laura
+    - miguel
+    - carmen
+    - pablo
+    - esther
+    - victor
+    - francisco
+    - martín
+    - javier
+    - alberto
+    - pedro
+    - rubén
+    - sara
+    - cristina
+    - teresa
+    - fátima
+    - andrés
+    - antonio
+    - roberto
+    - ines
+    - sofía
+    - gabriel
+    - emma
+    - valeria
+    - eva
+    - tomás
+    - carlos
+    - verónica
+    - maría
+    - antonia
+    - josé
+    - pilar
+    - beatriz
+    - laura
+    - jorge
+    - esteban
+    - juan
+    - vicky
+        - ximena
+    - manel
+    - laura
+    - carlos
+    - ana
+    - ignacio
+    - sara
+    - javier
+    - marta
+    - pablo
+    - sofia
+    - lucia
+    - david
+    - maria
+    - jose
+    - alejandro
+    - beatriz
+    - daniel
+    - elena
+    - fernando
+    - gabriela
+    - hugo
+    - isabel
+    - karla
+    - luis
+    - nerea
+    - álvaro
+    - patricia
+    - juan
+    - carmen
+    - antonio
+    - rosa
+    - francisco
+    - yolanda
+    - rafael
+    - teresa
+    - ricardo
+    - aitor
+    - vanessa
+    - andrés
+    - raquel
+    - pilar
+    - oscar
+    - sandra
+    - juanita
+    - tomás
+    - sonia
+    - jorge
+    - iván
+    - rubén
+    - miriam
+    - adrián
+    - raúl
+    - catalina
+    - andrea
+    - martina
+    - victoria
+    - félix
+    - diana
+    - mariana
+    - cristina
+    - guillermo
+    - alberto
+    - inés
+    - héctor
+    - claudia
+    - sergio
+    - lorena
+    - martín
+    - verónica
+    - aroa
+    - lidia
+    - marcos
+    - luisana
+    - nicolás
+    - eva
+    - salma
+    - mercedes
+    - manuel
+    - gabriel
+    - valentina
+    - jordi
+    - julio
+    - esteban
+    - emma
+    - susana
+    - samuel
+    - césar
+    - carla
+    - adriana
+    - clara
+    - felipe
+    - maría josé
+    - federico
+    - valentín
+    - gerardo
+    - violeta
+    - josé luis
+    - josé antonio
+    - joaquín
+    - amparo
+    - juan francisco
+    - antonio josé
+    - juan manuel
+    - aitana
+    - miguel ángel
+    - francisco javier
+    - josé maría
+    - rodrigo
+    - pedro
+    - gonzalo
+    - valeria
+    - alfonso
+    - lourdes
+    - julia
+    - ángela
+    - celia
+    - roberto
+    - ángel
+    - emilio
+    - luis miguel
+    - mónica
+    - jaime
+    - mario
+    - paco
+    - enrique
+    - álex
+    - silvia
+    - natalia
+    - ángeles
+    - elsa
+    - maría ángeles
+    - jorge luis
+    - belén
+    - jesús
+    - alba
+    - carolina
+    - vicente
+    - vicky
+    - jeickon
+    - carlota
+    - daniela
+    - esther
+    - víctor
+    - fátima
+    - ALEJANDRO RODRIGUEZ
+    - Paloma Redondo
+    - antonio rodriguez
+    - Miguel Angel
+    - Antonio Rodriguez
+    - Roque
+    - Roque Cuesta
+    - Victor Maroto
+    - José Francisco Sánchez
+    - Jonathan
+    - José Francisco Sánchez
+    - Sandra
+    - Fernando Garcia
+    - Fátima Arranz Sanz
+    - Alberto Ventura
+    - Jose Luis Hidalgo
+    - Juan Morales
+    - Jose Francisco Sanchez
+    - Pedro Rubio
+    - Alejandro Rodriguez
+    - Luis Huesca García
+    - Elena Gomez
+    - Alvaro Alonso
+    - David Henriques
+    - jorge
+    - ROQUE CUESTA
+    - David Henriques
+    - Fatima Arranz
+    - Luis Huesca
+    - Paloma Redondo
+    - Javier Navarro
+    - Maria Tornero
+    - Raúl/Adrián
+    - Juan José Juárez
+    - Raúl Riquelme
+    - Sandra Parama
+    - Enrique Bautista
+    - Adrián/Raúl
+    - Juan Jose Juarez
+    - Ivan Miguel
+    - Juan José Juárez
+    - Miguel Angel Martinez
+    - Pedro Jesus Merino Izquierdo
+    - antonio rodriguez
+    - Andres Rodenas
+    - Andres Rodenas
+    - Javier Navarro
+    - ANTONIO RODRIGUEZ
+    - Cristina López
+    - Jorge
+    - luis piñeiro
+    - ANTONIO RODRIGUEZ
+    - Victor Maroto
+    - Facturacion
+    - Madrid
+    - Oscar Martinez
+    - francisca merino
+    - Raul Riquelme
+    - Juan José Juárez
+    - ANTONIO RODRIGUEZ
+    - ANTONIO RODRIGUEZ
+    - Vanessa
+    - Fátima Arranz Sanz
+    - jorge
+    - Roque cuesta
+    - Fatima Arranz
+    - Iván
+    - prueba
+    - Miguel Angel Martinez
+    - paloma
+    - Fátima Arranz Sanz
+    - Miguel Angel Martinez
+    - Fátima Arranz Sanz
+    - Fátima Arranz Sanz
+    - fatima arranz sanz
+    - Miguel Angel Martinez
+    - ANA BELEN BLANCO PARAFITA
+    - Alvaro Gili
+    - Juan José Juárez
+    - Fátima Arranz Sanz
+    - José Francisco Sánchez
+    - Roque Cuesta Escudero
+    - Pedro Merino
+    - Alejandro Rodríguez Benito
+    - Vanessa
+    - Javier Navarro
+    - David Fernández
+    - SILVIA ROMPIETTI
+    - Javier Navarro
+    - Pedro Rubio LORENTE
+    - Pedro Rubio Lorente
+    - Pedro Rubio Lorente
+    - Juan
+    - Juan José Juárez
+    - SILVIA (ATC)
+    - Jorge
+    - ANA BELEN BLANCO PARAFITA
+    - Oscar Martinez
+    - Paloma Redondo
+    - ANDREA MOURO OTERO
+    - ANDREA MOURO OTERO
+    - ANTONIO RODRIGUEZ
+    - antonio rodriguez
+    - Miguel Angel Martinez Casares
+    - Alvaro Gili
+    - Oscar Martinez
+    - Vanessa Martin Redondo
+    - Nicolas Lecat
+    - Francisca Merino
+    - Santiago
+    - Fátima Arranz Sanz
+    - jorge
+    - Paloma Redondo
+    - Paloma Redondo
+    - Paloma Redondo
+    - Jose M.Castiñeira
+    - Jose M Castiñeira
+    - Ana Belen
+    - Laura Sánchez Gomes
+    - Raúl/Adrián
+    - Estefania Melendez
+    - Sandra Parama Paz
+    - Nicolas Lecat
+    - Ruth rodriguez
+    - Fatima Arranz
+    - Raúl
+    - Paloma Redondo
+    - Cristina Lopez
+    - Sandra Parama
+    - Antonio Guzman
+    - Jose Manuel Castiñeira
+    - Estefania Melendez
+    - fatima arranz
+    - Miguel Angel Martinez
+    - cristina lopez
+    - Paloma redondo
+    - Cristina López
+    - Nicolas Lecat
+    - vanessa
+    - Carlos Barderas
+    - Sergio Lopez
+    - Raul Riquelme
+    - Paloma Redondo
+    - Oscar Martínez
+    - Fátima Arranz Sanz
+    - Paloma Redondo
+    - Sandra Parama
+    - Oscar Iglesias
+    - Sandra Parama Paz
+    - Paloma Redondo
+    - Oscar Martínez
+    - Oscar Martínez
+    - Andrea Mouro
+    - ESTEFANIA
+    - Sandra Parama Paz
+    - Sandra Parama Paz
+    - vanessa carpintero
+    - Estefania Melendez
+    - Oscar Martínez
+    - Ivan
+    - José Manuel Castiñeira
+    - Cliente Carnicas Chica
+    - Estefania Melendez M.
+    - Ivan
+    - José Manuel Castiñeira
+    - VANESA
+    - Paloma Redondo
+    - Pedro Merino
+    - Estefania Melendez
+    - PEDRO MERINO
+    - EULOGIO SANCHEZ CALDERA
+    - Paloma Redondo
+    - Jose Castiñeira
+    - JOSE MANUEL LUQUE BEJARANO
+    - Roque Cuesta
+    - vanesa
+    - vanessa carpintero
+    - Oscar Martínez
+    - Fátima Arranz Sanz
+    - Josçe Manuel Castiñeira
+    - Javier Navarro
+    - Jose Manuel Castiñeira
+    - PALOMA REDONDO
+    - Jose Manuel Castiñeira
+    - Nicolas Lecat
+    - vanessa
+    - Sebastian
+    - Francisca Merino Aibar
+    - Oscar Martínez
+    - Luis Mejía
+    - Jose Manuel Castiñeira
+    - Estefania Melendez
+    - Ignacio
+    - Sandra Parama
+    - Silvia Rompietti
+    - Jose Manuel Castineira
+    - Oscar Martínez
+    - Victor Maroto
+    - Aroa
+    - paloma redondo
+    - jorge
+    - Oscar Martínez
+    - Ivan Miguel Mozo
+    - jose manuel luque
+    - SILVIA
+    - Paloma Redondo
+    - Jose Manuel Castiñeira
+    - Oscar Martínez
+    - Silvia Rompietti
+    - Oscar Iglesias Rodriguez
+    - Estefania
+    - Paloma Redondo
+    - José Manuel Castiñeira
+    - Estefania
+    - Jose Manuel Castiñeira
+    - Raquel Palencia Ortega
+    - Belen
+    - Estefania
+    - Jennifer Martínez
+    - Laura Sánchez Gomes
+    - Oscar Martínez
+    - Javier Navarro
+    - Raquel Palencia
+    - sandra Parama Paz
+    - Javier Navarro
+    - FATIMA ARRANZ

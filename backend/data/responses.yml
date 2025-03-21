@@ -10,10 +10,13 @@ responses:
   - text: "Soy un chatbot diseñado para proporcionar soporte de IT."
 
   utter_hola_conociemiento:
-  - text: "Hola, {nombre}."
+  - text: "Hola, {nombre}, ¿en qué puedo ayudarte?."
 
   utter_hola:
-  - text: "Hola"
+  - text: "Hola, ¿en qué puedo ayudarte?."
+
+  utter_responder_delegacion:
+  - text: "Genial, trabajas en la delegación {delegacion}, ¿en qué puedo ayudarte?."
 
   utter_alegrarse:
   - text: "Genial me alegro mucho."
@@ -40,11 +43,42 @@ responses:
   - text: "¿Puedes indicarme cuál es tu nombre?"
   
   utter_ask_delegacion:
-  - text: "¿Podrias indicarme en qué delegación te trabajas?"
+  - text: "¿En qué delegación te trabajas?"
 
-  utter_delega:
-  - text: "{delegacion}."
+  utter_ask_problema:
+  - text: "¿Cuál es el problema que tienes?"
 
-  utter_nombre:
-  - text: "{nombre}."
+  utter_ask_email:
+    - text: "Por favor, indícame tu email."
+
+  utter_ask_departamento:
+  - text: "¿En qué departamento trabajas?"
+
+  utter_ask_tipo_solicitud:
+  - text: "¿Qué tipo de solicitud deseas realizar?\n
+           • Padua.\n
+           • ViaWeb.\n
+           • Equipos, etiquetadoras e impresoras.\n
+           • Albarán digital.\n
+           • Clientes.\n
+           • Desarrollos y proyectos.\n
+           • Otros.\n"
+
+  utter_ask_importancia:
+  - text: "¿Qué importancia tiene tu solicitud?
+           • Crítica.\n
+           • Importante.\n
+           • Algo importante.\n
+           • Poco importante.\n
+           • Mínima.\n"
+
+  utter_drop_info:
+  - text: "{delegacion}.\n
+           {nombre}\n
+           {email}\n
+           {problema}\n
+           {departamento}\n
+           {tipo_solicitud}\n
+           {importancia}\n"
+
 
