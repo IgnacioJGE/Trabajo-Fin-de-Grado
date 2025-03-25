@@ -5,12 +5,15 @@ stories:
     steps:
     - intent: decir_nombre
     - action: utter_hola_conociemiento
+
   
-  # CUANDO EL PROBLEMA SE HA SOLUCIONADO 
   - story: Saludar
     steps:
     - intent: saludar
     - action: action_saludar_personalizado
+  
+  # CUANDO EL PROBLEMA SE HA SOLUCIONADO 
+
   - story: Problema con el ratón solucionado #RATON
     steps:
     - intent: problema_raton
@@ -59,6 +62,7 @@ stories:
     - action: utter_problema_etiquetadoras
     - intent: negar
     - action: utter_alegrarse
+  
   
   # CUANDO EL PROBLEMA NO SE HA SOLUCIONADO
 

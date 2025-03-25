@@ -10,6 +10,9 @@ nlu:
     - quiero abrir un ticket de soporte
     - quiero abrir un ticket de ayuda
     - quiero crear un tique 
+    - si quiero poner un ticket helpdeskl
+    - deseo poner un ticket helpdesk
+    - ticket helpdesk
     - tique de ayuda
     - tique a sistemas
     - tiquet de soporte
@@ -38,6 +41,16 @@ nlu:
     - hasta la vista
     - ya nos veremos
     - adiós
+    - adios
+    - taluego
+    - bye
+    - chaito 
+    - adiieu
+    - hasta pronto
+    - hasta la próxima
+    - adiossss
+    - aidos 
+    
 - intent: afirmar
   examples: |
     - si

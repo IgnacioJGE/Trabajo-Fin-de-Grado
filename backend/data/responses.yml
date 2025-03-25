@@ -43,7 +43,7 @@ responses:
   - text: "¿Puedes indicarme cuál es tu nombre?"
   
   utter_ask_delegacion:
-  - text: "¿En qué delegación te trabajas?"
+  - text: "¿En qué delegación trabajas?"
 
   utter_ask_problema:
   - text: "¿Cuál es el problema que tienes?"
@@ -65,13 +65,21 @@ responses:
            • Otros.\n"
 
   utter_ask_importancia:
-  - text: "¿Qué importancia tiene tu solicitud?
+  - text: "¿Qué importancia tiene tu solicitud?\n
            • Crítica.\n
            • Importante.\n
            • Algo importante.\n
            • Poco importante.\n
            • Mínima.\n"
 
+  utter_preguntar_cambio_problema:
+  - text: "Este es el problema que has indicado: {problema}. ¿Deseas cambiarlo?(Sí/No)"
+  utter_pedir_nuevo_problema:
+  - text: "Indicame el problema:"
+
+  utter_iniciar_formulario:
+  - text: "Perfecto, necesito que me indiques algunos datos para poder poner el ticket."
+  
   utter_drop_info:
   - text: "{delegacion}.\n
            {nombre}\n

@@ -5,11 +5,12 @@ from rasa_sdk.events import SlotSet
 
 class GuardarProblema(Action):
     def name(self):
-        return "action_guardar_problema"
+        return "action_guardar_mensaje"
 
     def run(self, dispatcher, tracker, domain):
-        ultimo_problema = tracker.latest_message.get('text')
-        return [SlotSet("problema,", ultimo_problema)]
+        ultimo_problema = tracker.get_slot('problema_usuario_cambio')
+        
+        return [SlotSet("problema", ultimo_problema)]
 
 class CrearentradaSharepoint(Action):
     def name(self):

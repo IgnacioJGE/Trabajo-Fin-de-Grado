@@ -83,19 +83,34 @@ slots:
     mappings:
     - type: from_entity
       entity: importancia
+
+  problema_usuario_cambio:
+    type: text 
+    influence_conversation: true
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: form_rellenar_problema
+
+
+
 forms:
   form_helpedesk:
     required_slots:
       - nombre
+      - problema
       - delegacion
       - departamento
       - email
       - tipo_solicitud
       - importancia
-
+    
+  form_rellenar_problema: #supuestamente al hacer el forma así pilla cualquier texto que le metas 
+    required_slots:
+      - problema_usuario_cambio
 actions:
  - action_crear_entrada_sharepoint
- - action_guardar_problema
+ - action_guardar_mensaje
  - action_saludar_personalizado
       
 session_config:

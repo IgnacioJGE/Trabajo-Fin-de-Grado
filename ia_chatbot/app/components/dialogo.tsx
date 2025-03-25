@@ -22,20 +22,20 @@ function Dialogo({ sesion }: Propssesion) {
         ...prevDisplay,
         { text: inputValue, usuario: "persona" },
       ]);
-      console.log(sesion);
       const respuesta = await respuestachatbot(inputValue, sesion);
-
       setTimeout(() => {
-        if (regexemail.test(respuesta)) {
-          setDisplayValue((prevDisplay) => [
-            ...prevDisplay,
-            { text: respuesta, usuario: "bot_imagen" },
-          ]);
-        } else {
-          setDisplayValue((prevDisplay) => [
-            ...prevDisplay,
-            { text: respuesta, usuario: "bot" },
-          ]);
+        for (let i = 0; i < respuesta.length; i++) {
+          if (regexemail.test(respuesta[i].text)) {
+            setDisplayValue((prevDisplay) => [
+              ...prevDisplay,
+              { text: respuesta[i].text, usuario: "bot_imagen" },
+            ]);
+          } else {
+            setDisplayValue((prevDisplay) => [
+              ...prevDisplay,
+              { text: respuesta[i].text, usuario: "bot" },
+            ]);
+          }
         }
       }, 500);
       setInputValue("");
