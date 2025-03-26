@@ -27,15 +27,16 @@ rules:
   - intent: imagen
   - action: utter_drop_imagen
 
-- rule: Inciar formulario
+- rule: Inciar formulario #Iniciar formulario
   steps:
   - intent: crear_ticket
+  - action: poner_siono_a_None
   - action: utter_iniciar_formulario
   - action: form_helpedesk
   - active_loop: form_helpedesk
 
 
-- rule: Finalizar formulario
+- rule: Finalizar formulario #Finalizar formulario
   condition:
   - active_loop: form_helpedesk
   steps:
@@ -43,29 +44,10 @@ rules:
   - active_loop: null
   - slot_was_set:
       - requested_slot: null
-  - action: utter_preguntar_cambio_problema
-  - intent: afirmar
-  - action: utter_pedir_nuevo_problema
-  - active_loop: form_rellenar_problema
+  - action: cambio_problema
 
 
-- rule: Usuario NO quiere cambiar el problema
-  condition:
-  - slot_was_set:
-      - requested_slot: null
-  steps:
-  - intent: negacion
-  - action: utter_drop_info
 
-
-- rule: Guardar nuevo problema usuario 
-  condition:
-  - active_loop: form_rellenar_problema
-  steps:
-  - slot_was_set:
-    - requested_slot: null
-  - action: action_guardar_mensaje
-  - action: utter_drop_info
 
 
 

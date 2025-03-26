@@ -1,4 +1,5 @@
 import axios from "axios";
+import { text } from "stream/consumers";
 
 
 async function respuestachatbot(mensaje: string,sesion: string) {
@@ -9,14 +10,14 @@ async function respuestachatbot(mensaje: string,sesion: string) {
       });
     
     if (response.data && response.data.length > 0) {
-
+      console.log(response)
       return response.data;
     } else {
-      return "Sin respuesta del chatbot";
+      return [{text:"Sin respuesta del chatbot"}];
     }
   } catch (error) {
     console.error("Error en la llamada API:", error);
-    return "Error al obtener respuesta";
+    return [{text:"Error al obtener respuesta"}];
   }
 }
 

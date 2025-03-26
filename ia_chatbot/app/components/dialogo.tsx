@@ -23,8 +23,9 @@ function Dialogo({ sesion }: Propssesion) {
         { text: inputValue, usuario: "persona" },
       ]);
       const respuesta = await respuestachatbot(inputValue, sesion);
+      console.log(respuesta);
       setTimeout(() => {
-        for (let i = 0; i < respuesta.length; i++) {
+        for (let i = 0; i < respuesta.length; i++) { // recibe un array con todos los mensajes y comprueba si son imagenes o texto
           if (regexemail.test(respuesta[i].text)) {
             setDisplayValue((prevDisplay) => [
               ...prevDisplay,

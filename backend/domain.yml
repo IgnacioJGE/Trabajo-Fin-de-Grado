@@ -32,6 +32,7 @@ entities:
 - departamento
 - tipo_solicitud
 - importancia
+- siono 
 
 slots:
   nombre:
@@ -84,13 +85,16 @@ slots:
     - type: from_entity
       entity: importancia
 
-  problema_usuario_cambio:
-    type: text 
-    influence_conversation: true
+  siono:
+    type: categorical
+    values:
+      - "sí"
+      - "no"
     mappings:
-      - type: from_text
+      - type: from_entity
         conditions:
-          - active_loop: form_rellenar_problema
+         - active_loop: form_helpedesk
+           requested_slot: siono 
 
 
 
@@ -104,14 +108,14 @@ forms:
       - email
       - tipo_solicitud
       - importancia
+      - siono
     
-  form_rellenar_problema: #supuestamente al hacer el forma así pilla cualquier texto que le metas 
-    required_slots:
-      - problema_usuario_cambio
 actions:
- - action_crear_entrada_sharepoint
+ - cambio_problema
  - action_guardar_mensaje
  - action_saludar_personalizado
+ - action_crear_ticket_helpdesk
+ - poner_siono_a_None
       
 session_config:
   session_expiration_time: 30

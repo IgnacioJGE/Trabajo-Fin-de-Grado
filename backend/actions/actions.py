@@ -1,24 +1,23 @@
 from rasa_sdk import Action
 from rasa_sdk.events import ActiveLoop
-from rasa_sdk.events import SlotSet
+from rasa_sdk.events import SlotSet,FollowupAction
 
 
 class GuardarProblema(Action):
     def name(self):
-        return "action_guardar_mensaje"
+        return "cambio_problema"
 
     def run(self, dispatcher, tracker, domain):
-        ultimo_problema = tracker.get_slot('problema_usuario_cambio')
+        respuesta = tracker.get_slot('siono')
         
-        return [SlotSet("problema", ultimo_problema)]
-
-class CrearentradaSharepoint(Action):
-    def name(self):
-        return "action_crear_entrada_sharepoint"
-
-    def run(self, dispatcher, tracker, domain):
-        dispatcher.utter_message("Creando entrada en Sharepoint")
-        return []
+        if(respuesta == "no"):
+            return [FollowupAction("action_crear_ticket_helpdesk")]
+        else:
+            return [
+                SlotSet("problema", None),
+                SlotSet("siono", "no"),
+                ActiveLoop("form_helpedesk")
+            ]
 
 
 class ActionSaludarPersonalizado(Action):
@@ -34,4 +33,20 @@ class ActionSaludarPersonalizado(Action):
             dispatcher.utter_message(text="Hola, ¿cómo puedo ayudarte?")
         
         return []
+    
+
+class ActionDespedir(Action):
+    def name(self):
+        return "action_crear_ticket_helpdesk"
+
+    def run(self, dispatcher, tracker, domain):
+        return [FollowupAction("utter_drop_info")]
+    
+
+class ActionCrearTicketHelpdesk(Action):
+    def name(self):
+        return "poner_siono_a_None"
+
+    def run(self, dispatcher, tracker, domain):
+        return [SlotSet("siono", None)]
   

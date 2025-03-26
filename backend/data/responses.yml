@@ -16,7 +16,7 @@ responses:
   - text: "Hola, ¿en qué puedo ayudarte?."
 
   utter_responder_delegacion:
-  - text: "Genial, trabajas en la delegación {delegacion}, ¿en qué puedo ayudarte?."
+  - text: "Genial, trabajas en la delegación {delegacion}, ¿en qué puedo ayudarte?"
 
   utter_alegrarse:
   - text: "Genial me alegro mucho."
@@ -46,7 +46,7 @@ responses:
   - text: "¿En qué delegación trabajas?"
 
   utter_ask_problema:
-  - text: "¿Cuál es el problema que tienes?"
+  - text: "Por favor indicame el problema que tienes:"
 
   utter_ask_email:
     - text: "Por favor, indícame tu email."
@@ -72,21 +72,24 @@ responses:
            • Poco importante.\n
            • Mínima.\n"
 
-  utter_preguntar_cambio_problema:
-  - text: "Este es el problema que has indicado: {problema}. ¿Deseas cambiarlo?(Sí/No)"
-  utter_pedir_nuevo_problema:
+  utter_ask_problema_usuario_cambio:
   - text: "Indicame el problema:"
+
+  utter_ask_siono:
+  - text: "Este es el problema que has indicado: {problema}. ¿Deseas cambiarlo?(sí/no)"
+
 
   utter_iniciar_formulario:
   - text: "Perfecto, necesito que me indiques algunos datos para poder poner el ticket."
   
   utter_drop_info:
-  - text: "{delegacion}.\n
+  - text: "{delegacion}\n
            {nombre}\n
            {email}\n
            {problema}\n
            {departamento}\n
            {tipo_solicitud}\n
-           {importancia}\n"
+           {importancia}\n
+           {siono}\n"
 
 

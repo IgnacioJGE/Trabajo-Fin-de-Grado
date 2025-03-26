@@ -63,6 +63,5 @@ stories:
     - intent: negar
     - action: utter_alegrarse
   
-  
   # CUANDO EL PROBLEMA NO SE HA SOLUCIONADO
 

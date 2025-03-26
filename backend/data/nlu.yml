@@ -3,6 +3,7 @@ nlu:
 - intent: crear_ticket
   examples: |
     - queiero poner un ticket
+    - quiero poner un ticket 
     - quiero poner una reclamacion
     - quiero poner una queja
     - quiero abrir un ticket en el helpdesk
@@ -14,6 +15,7 @@ nlu:
     - deseo poner un ticket helpdesk
     - ticket helpdesk
     - tique de ayuda
+    - quiero poner un tique
     - tique a sistemas
     - tiquet de soporte
     - desearia poner un ticket de soperte
@@ -53,38 +55,42 @@ nlu:
     
 - intent: afirmar
   examples: |
-    - si
-    - s
-    - claro
-    - efectivamente
-    - obvio
-    - correcto
-    - perfect
-    - por supuesto
-    - por supuestísimo
-    - por supuesto que sí
-    - afirmativo
-    - exacto
-    - siiiiiiii
-    - yess
-    - yep
-    - yes
-    - yeah
-    - y
+    - [si](siono)
+    - [s](siono)
+    - [claro](siono)
+    - [efectivamente](siono)
+    - [obvio](siono)
+    - [correcto](siono)
+    - [perfect](siono)
+    - [por supuesto](siono)
+    - [por supuestísimo](siono)
+    - [por supuesto que sí](siono)
+    - [afirmativo](siono)
+    - [exacto](siono)
+    - [siiiiiiii](siono)
+    - [yess](siono)
+    - [yep](siono)
+    - [yes](siono)
+    - [yeah](siono)
+    - [y](siono)
+    - [Sí](siono)
+    - [Siuuuuuuu](siono)
+
 - intent: negar
   examples: |
-    - no
-    - n
-    - nunca
-    - nanai
-    - nope
-    - imposible
-    - ni de broma
-    - not
-    - no way
-    - nein
-    - nooooooooo
-    - never
+    - [no](siono)
+    - [n](siono)
+    - [nunca](siono)
+    - [nanai](siono)
+    - [nope](siono)
+    - [imposible](siono)
+    - [ni de broma](siono)
+    - [not](siono)
+    - [no way](siono)
+    - [nein](siono)
+    - [nooooooooo](siono)
+    - [never](siono)
+
 - intent: bot_challenge
   examples: |
     - ¿Eres un Bot?
@@ -227,12 +233,12 @@ nlu:
     - Me llamo [Alejandro](nombre)
     - Mi nombre es [Beatriz](nombre)
     - [Daniel](nombre)
-    - [Elena](nombre)
+    - [Elena montilla](nombre)
     - [Fernando](nombre)
     - [Gabriela](nombre)
     - [Hugo](nombre)
     - [Isabel](nombre)
-    - [Karla](nombre)
+    - [Karla silva](nombre)
     - [Luis](nombre)
     - [Nerea](nombre)
     - [Oscar](nombre)
@@ -244,7 +250,7 @@ nlu:
     - [Uxía](nombre)
     - [Víctor](nombre)
     - [Wanda](nombre)
-    - [xavier](nombre)
+    - [xavier fernandez](nombre)
     - [Yolanda](nombre)
     - [Zoe](nombre)
     - Me llamo [adrián](nombre)
@@ -253,7 +259,7 @@ nlu:
     - [Diego](nombre)
     - [Eva](nombre)
     - [Francisco](nombre)
-    - [gloria](nombre)
+    - [gloria Dominguez](nombre)
     - [Héctor](nombre)
     - [Irene](nombre)
     - [Juan](nombre)
@@ -263,7 +269,7 @@ nlu:
     - [Natalia](nombre)
     - [Olga](nombre)
     - [quirino](nombre)
-    - [Rocío](nombre)
+    - [Rocío Estévez](nombre)
     - [Sergio](nombre)
     - [Teresa](nombre)
     - [Úrsula](nombre)
@@ -276,12 +282,12 @@ nlu:
     - Mi nombre es [Begoña](nombre)
     - Soy [Cristina](nombre)
     - [Domingo](nombre)
-    - [Esteban](nombre)
+    - [Esteban Guapo](nombre)
     - [Fabiola](nombre)
     - [Gonzalo](nombre)
     - [Hilda](nombre)
     - [Julia](nombre)
-    - [Kevin](nombre)
+    - [Kevin Martínez](nombre)
     - [leonor](nombre)
     - [Marcos](nombre)
     - [Noelia](nombre)
@@ -289,7 +295,7 @@ nlu:
     - [paula](nombre)
     - [Quintana](nombre)
     - [Ramón](nombre)
-    - [Salvador](nombre)
+    - [Salvador García](nombre)
     - [Tamara](nombre)
     - [Ulises](nombre)
     - [vanesa](nombre)
@@ -305,7 +311,7 @@ nlu:
     - [Félix](nombre)
     - [Guillermo](nombre)
     - [Hana](nombre)
-    - [Iván](nombre)
+    - [Iván Rubio](nombre)
     - [Joaquín](nombre)
     - [Karen](nombre)
     - [Lidia](nombre)
@@ -318,7 +324,7 @@ nlu:
     - [Sandra](nombre)
     - [Trinidad](nombre)
     - [Ursula](nombre)
-    - [Vicente](nombre)
+    - [Vicente López](nombre)
     - me llamo [lola](nombre)
     - me llamo [miercoles](nombre)
     - mi nombreeeee essss [jose](nombre)
