@@ -1,13 +1,16 @@
+
+
 # Archivos de caché
 actions/__pycache__/
 .rasa/
 .logs/
 *.db
 *.lock
-
+.env
 # Archivos de pytest
 .pytest_cache/
 
 # Archivos de sistema
 .DS_Store
 Thumbs.db
+

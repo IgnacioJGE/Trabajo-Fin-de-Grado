@@ -6,6 +6,13 @@ stories:
     - intent: decir_nombre
     - action: utter_hola_conociemiento
 
+  - story: crear formulario
+    steps:
+    - intent: crear_ticket
+    - action: poner_siono_a_None
+    - action: utter_iniciar_formulario
+    - action: form_helpedesk
+    - active_loop: form_helpedesk
   
   - story: Saludar
     steps:
@@ -65,3 +72,72 @@ stories:
   
   # CUANDO EL PROBLEMA NO SE HA SOLUCIONADO
 
+  - story: Problema con el ratón no solucionado #RATON
+    steps:
+    - intent: problema_raton
+    - action: utter_problema_raton
+    - intent: afirmar
+    - action: poner_siono_a_None
+    - action: utter_iniciar_formulario
+    - action: form_helpedesk
+    - active_loop: form_helpedesk
+
+  - story: Problema con el teclado solucionado #TECLADO
+    steps:
+    - intent: problema_teclado
+    - action: utter_problema_teclado
+    - intent: afirmar
+    - action: poner_siono_a_None
+    - action: utter_iniciar_formulario
+    - action: form_helpedesk
+    - active_loop: form_helpedesk
+  
+  - story: Ordenador lento solucionado #ORDENADOR LENTO
+    steps:
+    - intent: ordenador_lento
+    - action: utter_ordenador_lento
+    - intent: afirmar
+    - action: poner_siono_a_None
+    - action: utter_iniciar_formulario
+    - action: form_helpedesk
+    - active_loop: form_helpedesk
+  
+  - story: Trackpad desactivado solucionado #TRACKPAD
+    steps:
+    - intent: trackpad_desactivado
+    - action: utter_trackpad_desactivado
+    - intent: afirmar
+    - action: poner_siono_a_None
+    - action: utter_iniciar_formulario
+    - action: form_helpedesk
+    - active_loop: form_helpedesk
+  
+  - story: Problema con el espacio en disco solucionado #ESPACIO EN DISCO
+    steps:
+    - intent: problema_espacio_disco
+    - action: utter_problema_espacio_disco
+    - intent: afirmar
+    - action: poner_siono_a_None
+    - action: utter_iniciar_formulario
+    - action: form_helpedesk
+    - active_loop: form_helpedesk
+
+  - story: Problema con el correo lleno solucionado #CORREO LLENO
+    steps:
+    - intent: problema_correo_lleno
+    - action: utter_problema_correo_lleno
+    - intent: afirmar
+    - action: poner_siono_a_None
+    - action: utter_iniciar_formulario
+    - action: form_helpedesk
+    - active_loop: form_helpedesk
+  
+  - story: Problema con etiquetadoras solucionado #ETIQUETADORAS
+    steps:
+    - intent: problema_etiquetadoras
+    - action: utter_problema_etiquetadoras
+    - intent: afirmar
+    - action: poner_siono_a_None
+    - action: utter_iniciar_formulario
+    - action: form_helpedesk
+    - active_loop: form_helpedesk

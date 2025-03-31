@@ -34,7 +34,6 @@ nlu:
     - no quiero ticket de ayuda
     - no quiero ticket de soporte
 
-
 - intent: adios
   examples: |
     - hasta luego
@@ -97,6 +96,7 @@ nlu:
     - ¿Eres humano?
     - ¿Con quien hablo?
     - ¿Estoy hablando con un humano?
+
 - intent: saludar
   examples: |
     - Hola
@@ -106,6 +106,7 @@ nlu:
     - Buenos días
     - Buenas noches
     - Buenas tardes
+
 - intent: positivo
   examples: |
     - bien
