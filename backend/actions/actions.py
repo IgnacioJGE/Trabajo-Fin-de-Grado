@@ -1,11 +1,12 @@
+import datetime
+import json
 from rasa_sdk import Action
 from rasa_sdk.events import ActiveLoop
 from rasa_sdk.events import SlotSet,FollowupAction,UserUtteranceReverted
-import msal
-from dotenv import load_dotenv
 import os
 import requests
-
+from .funciones import decidir_persona_asignada,calcular_importancia,token_auth
+from dotenv import load_dotenv
 
 class GuardarProblema(Action):
     def name(self):
@@ -23,7 +24,52 @@ class GuardarProblema(Action):
                 ActiveLoop("form_helpedesk")
             ]
 
+class Crearticket(Action):
+    def name(self):
+        return "action_crear_ticket_helpdesk"
 
+    async def run(self, dispatcher, tracker, domain):
+        load_dotenv()
+        nombre = tracker.get_slot("nombre")
+        delegacion = tracker.get_slot("delegacion")
+        departamento = tracker.get_slot("departamento")
+        tipo_solicitud = tracker.get_slot("tipo_solicitud")
+        problema= tracker.get_slot("problema")
+        correo = tracker.get_slot("email")
+        importancia = tracker.get_slot("importancia")
+        url=os.getenv("url")
+
+        json_data = await token_auth()
+        headers = {
+            'Authorization': "Bearer " + json_data['access_token'],
+            'Accept':'application/json;odata=verbose',
+            'Content-Type': 'application/json;odata=verbose'
+        }
+        fecha = datetime.datetime.now()
+        dato = {
+            '__metadata': {"type": "SP.Data.BBDD_x0020_HelpDeskListItem"},
+            'Estado_solicitud': "Registrado",
+            'Delegacion': delegacion,
+            'Nombre_Apellido': nombre,
+            'Tipo_Solicitud': tipo_solicitud,
+            'Correo_electronico': correo,
+            'Area_consulta': departamento,
+            'Detalles_consulta': problema,
+            'Criticidad': importancia,
+            'Persona_Asignada': "",
+            'Fecha_solicitud': fecha.strftime("%d-%m-%y")
+        }
+        Persona_asignada= decidir_persona_asignada(tipo_solicitud)
+        dato["Persona_Asignada"] = Persona_asignada
+        importancia= calcular_importancia(importancia)
+        dato["Criticidad"]= importancia
+        data=json.dumps(dato)
+        p= requests.post(url, headers=headers,data=data)
+        data= p.json()
+        id= data.get("d", {}).get("ID")
+        dispatcher.utter_message(text="Perfecto ya se ha enviado tu ticket, el id es: " + str(id))
+        return []
+    
 class ActionSaludarPersonalizado(Action):
     def name(self):
         return "action_saludar_personalizado"
@@ -38,49 +84,6 @@ class ActionSaludarPersonalizado(Action):
         
         return []
     
-
-class CrearTicket(Action):
-    def name(self):
-        return "action_crear_ticket_helpdesk"
-
-    def run(self, dispatcher, tracker, domain):
-        client_id = os.getenv("client_id")
-        client_secret = os.getenv("client_secret")
-        tenant_id = os.getenv("tenant_id")
-        scope = os.getenv("scope")
-        site_url = os.getenv("helpdesk_url")
-        list_name = os.getenv("helpdesk_list")
-        
-        
-        app = msal.ConfidentialClientApplication(
-            client_id,
-            authority=f"https://login.microsoftonline.com/{tenant_id}",
-            client_credential=client_secret
-            )
-        token_response = app.acquire_token_for_client(scopes=scope)
-        access_token = token_response.get('access_token')
-        url = f"{site_url}/_api/web/lists/getbytitle('{list_name}')/items"
-        headers = {
-            "Authorization": f"Bearer {access_token}",
-            "Accept": "application/json",
-            "Content-Type": "application/json",
-            }
-        data = {
-            "Estado_Solicitud": "Registrado",  # Título de la entrada (debe coincidir con el nombre del campo en la lista)
-            "Delegacion": "Prueba",
-            "Nombre_Apellido": "Ignacio",
-            "Departamento": "Proyectos y Sistemas",
-            "Tipo_Solicitud": "Equipos, etiquetadoras e impresoras",
-            "Detalles_solicitud": "Prueba",
-            "Importancia": "Mínima",
-            "Correo": "ignacio.garcia@narval.es"
-        }
-        response = requests.post(url, headers=headers, json=data)
-        
-        dispatcher.utter_message(text="Perfecto ya se ha enviado tu ticket, en breve nos pondremos en contacto")
-        return [FollowupAction("utter_drop_info")]
-    
-
 class SionoaNone(Action):
     def name(self):
         return "poner_siono_a_None"
@@ -88,3 +91,35 @@ class SionoaNone(Action):
     def run(self, dispatcher, tracker, domain):
         return [SlotSet("siono", None)]
   
+class Estadoticket(Action):
+    def name(self):
+        return "action_estado_ticket"
+
+    async def run(self, dispatcher, tracker, domain):
+        ticket=tracker.get_slot("ticket")
+        json_data =  await token_auth()
+        headers = {
+        'Authorization': "Bearer " + json_data['access_token'],
+        'Accept':'application/json;odata=verbose',
+        'Content-Type': 'application/json;odata=verbose'
+        }
+        url=f"https://te917868526.sharepoint.com/sites/SistemaHelpdesk/_api/web/lists/getbytitle('BBDD Sistemas')/items({ticket})"
+        p= requests.get(url, headers=headers)
+        data= p.json()
+        estado= data.get("d", {}).get("Estado_solicitud")
+        dispatcher.utter_message(text="El estado de tu ticket es: " + str(estado))
+        return []
+    
+    
+class ActionPruebas(Action):
+    def name(self):
+        return "action_pruebas"
+
+    async def run(self, dispatcher, tracker, domain):
+        load_dotenv()
+
+        client_id = os.getenv("client_id")
+        print(client_id)
+        dispatcher.utter_message(text="Holaaaaaaaaaaaaaaaaaaaaaa")
+        return []
+    

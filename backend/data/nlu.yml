@@ -1,5 +1,18 @@
 version: "3.1"
 nlu:
+- intent: prueba
+  examples: |
+    - prueba
+    - prueba de intencion
+    - prueba de intencion 2
+    - prueba de intencion 3
+    - prueba de intencion 4
+    - prueba de intencion 5
+    - prueba de intencion 6
+    - prueba de intencion 7
+    - prueba de intencion 8
+    - prueba de intencion 9
+  
 - intent: crear_ticket
   examples: |
     - queiero poner un ticket
@@ -158,19 +171,23 @@ nlu:
 - intent: porblema_tipo_solicitud
   examples: |
     - [Padua](tipo_solicitud)
+    - [padua](tipo_solicitud)
     - tengo un problrma con [Padua](tipo_solicitud)
     - [Padua](tipo_solicitud) no funciona
     - no me cunfiona un punto de [Padua](tipo_solicitud)
     - [ViaWeb](tipo_solicitud)
     - tengo un problrma con [ViaWeb](tipo_solicitud)
     - [ViaWeb](tipo_solicitud) no funciona
+    - [viaweb](tipo_solicitud) no funciona
     - Necesitamos alta del siguiente vehiculo en [viaweb](tipo_solicitud)
     - [Albarán digital](tipo_solicitud)
     - tengo un problrma con [Albarán digital](tipo_solicitud)
     - [Cliente](tipo_solicitud)
+    - [cliente](tipo_solicitud)
     - tengo un problrma con [Cliente](tipo_solicitud)
     - [Desarrollos y poryectos](tipo_solicitud)
     - tengo un problrma con [Desarrollos y poryectos](tipo_solicitud)
+    - [desarrollos y poryectos](tipo_solicitud)
 
 - intent: decir_email
   examples: |
@@ -214,6 +231,31 @@ nlu:
    - [Poco importante](importancia)
    - [Mínima](importancia)	
 
+- intent: estado_ticket
+  examples: |
+    - Quiero consultar el estado de un ticket
+    - consultar mi ticket
+    - estado de mi ticket helpdesk
+    - quiero saber como está mi codigo helpdesk 
+    - como va mi tíquet?
+    - en que estado se entuentra mi ticket helpdesk 
+    - QUIERO SABER COMO VA MI TICKET 
+    - ¿Cómo va mi ticket?
+    - en que estado se encuentra mi tiquet
+
+- intent: numero_ticket
+  examples: |
+    - [56](ticket)
+    - [12349](ticket)
+    - [90](ticket)
+    - [01234567890](ticket)
+    - [78901234567890](ticket)
+    - [34](ticket)
+    - [326](ticket)
+    - [243](ticket)
+    - [628](ticket)
+    - [1000](ticket)
+    
 - intent: decir_nombre
   examples: |
     - Me llamo [Manel](nombre)

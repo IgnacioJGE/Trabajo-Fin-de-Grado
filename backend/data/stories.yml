@@ -19,6 +19,13 @@ stories:
     - intent: saludar
     - action: action_saludar_personalizado
   
+  - story: Dar estado ticket
+    steps:
+    - intent: estado_ticket
+    - action: utter_pedir_ticket
+    - intent: numero_ticket
+    - action: action_estado_ticket
+  
   # CUANDO EL PROBLEMA SE HA SOLUCIONADO 
 
   - story: Problema con el ratón solucionado #RATON

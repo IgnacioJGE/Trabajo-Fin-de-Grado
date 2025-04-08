@@ -92,4 +92,6 @@ responses:
            {importancia}\n
            {siono}\n"
 
+  utter_pedir_ticket:
+  - text: "Perfecto, indícame tu número de ticket"
 

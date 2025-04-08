@@ -48,6 +48,10 @@ rules:
   - action: cambio_problema
   - action: action_crear_ticket_helpdesk
 
+- rule: Pruebas
+  steps:
+  - intent: prueba
+  - action: action_pruebas
 
 
 

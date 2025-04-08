@@ -24,6 +24,10 @@ intents:
 - decir_importancia
 - decir_departamento
 - decir_email
+- estado_ticket
+- numero_ticket
+- prueba
+
 
 entities:
 - nombre
@@ -34,6 +38,7 @@ entities:
 - tipo_solicitud
 - importancia
 - siono 
+- ticket
 
 slots:
   nombre:
@@ -85,6 +90,13 @@ slots:
     mappings:
     - type: from_entity
       entity: importancia
+  
+  ticket:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: ticket
 
   siono:
     type: categorical
@@ -114,10 +126,11 @@ forms:
     
 actions:
  - cambio_problema
- - action_guardar_mensaje
  - action_saludar_personalizado
  - action_crear_ticket_helpdesk
  - poner_siono_a_None
+ - action_pruebas
+ - action_estado_ticket
       
 session_config:
   session_expiration_time: 30
