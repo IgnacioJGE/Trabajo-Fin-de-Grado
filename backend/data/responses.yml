@@ -56,6 +56,7 @@ responses:
 
   utter_ask_tipo_solicitud:
   - text: "¿Qué tipo de solicitud deseas realizar?\n
+      <strong>Por favor selecciona una opción:</strong>\n
            • Padua.\n
            • ViaWeb.\n
            • Equipos, etiquetadoras e impresoras.\n
@@ -66,6 +67,7 @@ responses:
 
   utter_ask_importancia:
   - text: "¿Qué importancia tiene tu solicitud?\n
+      <strong>Por favor selecciona una opción:</strong>\n
            • Crítica.\n
            • Importante.\n
            • Algo importante.\n
@@ -94,4 +96,10 @@ responses:
 
   utter_pedir_ticket:
   - text: "Perfecto, indícame tu número de ticket"
+
+  utter_preguntar_parar_form:
+  - text: "¿Seguro que no quieres poner el ticket?(sí/no)"
+
+  utter_terminado_form:
+  - text: "Perfecto, se ha cancelado el ticket. ¿Puedo ayudarte con algo más?"
 

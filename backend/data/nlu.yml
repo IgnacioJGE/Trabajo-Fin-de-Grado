@@ -15,12 +15,12 @@ nlu:
   
 - intent: crear_ticket
   examples: |
-    - queiero poner un ticket
     - quiero poner un ticket 
     - quiero poner una reclamacion
     - quiero poner una queja
+    - ticket
+    - poner ticket
     - quiero abrir un ticket en el helpdesk
-    - quiero abrir un ticket
     - quiero abrir un ticket de soporte
     - quiero abrir un ticket de ayuda
     - quiero crear un tique 
@@ -30,6 +30,7 @@ nlu:
     - tique de ayuda
     - quiero poner un tique
     - tique a sistemas
+    - ticket helpdesk
     - tiquet de soporte
     - desearia poner un ticket de soperte
 
@@ -46,6 +47,10 @@ nlu:
     - no quiero abrir ticket
     - no quiero ticket de ayuda
     - no quiero ticket de soporte
+    - no abras el ticket 
+    - para
+    - no ticket
+    - salir no, no quiero mas ticket
 
 - intent: adios
   examples: |
@@ -119,6 +124,12 @@ nlu:
     - Buenos días
     - Buenas noches
     - Buenas tardes
+    - hola
+    - holita
+    - holowis
+    - hello
+    - ola
+    - holaa
 
 - intent: positivo
   examples: |
@@ -152,9 +163,13 @@ nlu:
   examples: |
     - [Madrid](delegacion)
     - Trabajo en la delegación de [Madrid](delegacion)
+    - [madrid](delegacion)
     - [Barcelona](delegacion)
+    - [barcelona](delegacion)
     - [Valladolid](delegacion)
+    - [valladolid](delegacion)
     - Estoy en [Burgos](delegacion)
+    - [Burgos](delegacion)
     - Mi delegacion es [Cordoba](delegacion)
     - [Alicante](delegacion)
     - [Sevilla](delegacion)
@@ -176,18 +191,26 @@ nlu:
     - [Padua](tipo_solicitud) no funciona
     - no me cunfiona un punto de [Padua](tipo_solicitud)
     - [ViaWeb](tipo_solicitud)
-    - tengo un problrma con [ViaWeb](tipo_solicitud)
-    - [ViaWeb](tipo_solicitud) no funciona
+    - [viaweb](tipo_solicitud)
+    - [Viaweb](tipo_solicitud) no funciona
     - [viaweb](tipo_solicitud) no funciona
-    - Necesitamos alta del siguiente vehiculo en [viaweb](tipo_solicitud)
     - [Albarán digital](tipo_solicitud)
+    - [albarán digital](tipo_solicitud)
+    - [albaran digital](tipo_solicitud)
     - tengo un problrma con [Albarán digital](tipo_solicitud)
-    - [Cliente](tipo_solicitud)
-    - [cliente](tipo_solicitud)
-    - tengo un problrma con [Cliente](tipo_solicitud)
+    - [Clientes](tipo_solicitud)
+    - [clientes](tipo_solicitud)
+    - tengo un problrma con [Clientes](tipo_solicitud)
     - [Desarrollos y poryectos](tipo_solicitud)
+    - [desarrollos y proyectos]
     - tengo un problrma con [Desarrollos y poryectos](tipo_solicitud)
     - [desarrollos y poryectos](tipo_solicitud)
+    - [Equipos, etiquetadoras e impresoras](tipo_solicitud)
+    - [equipos, etiquetadoras e impresoras](tipo_solicitud)
+    - tengo un problrma con [Equipos, etiquetadoras e impresoras](tipo_solicitud)
+    - [Otros](tipo_solicitud)
+    - [otros](tipo_solicitud)
+
 
 - intent: decir_email
   examples: |
@@ -213,14 +236,31 @@ nlu:
 - intent: decir_departamento
   examples: |
     - [Proyectos y Sistemas](departamento)
+    - [proyectos y sistemas](departamento)
     - [Comercial y clientes](departamento)
+    - [comercial y clientes](departamento)
     - [Calidad y colaboradores](departamento)
+    - [calidad y colaboradores](departamento)
+    - [calidad](departamento)
     - soy del departamento de [Financiero](departamento)
+    - [financiero](departamento)
     - [Recursos Humanos](departamento)
     - [Operaciones](departamento)
     - [ATC](departamento)
+    - [atc](departamento)
+    - [Sistemas](departamento)
+    - [RRHH](departamento)
+    - [rrhh](departamento)
     - [Control de gestión](departamento)
-    - [Arrastre](departamento)  
+    - [Arrastre](departamento) 
+    - [arrastre](departamento)
+    - [Control de Gestión](departamento)
+    - [Control de gestion](departamento)
+    - [Operaciones](departamento)
+    - [operaciones](departamento)
+    - [arrastre](departamento)
+    - [Arrastre](departamento)
+
   
 
 - intent: decir_importancia
@@ -272,7 +312,6 @@ nlu:
     - [David](nombre)
     - [Maria](nombre)
     - [Jose](nombre)
-    - [Laura](nombre)
     - Me llamo [Alejandro](nombre)
     - Mi nombre es [Beatriz](nombre)
     - [Daniel](nombre)
@@ -296,16 +335,16 @@ nlu:
     - [xavier fernandez](nombre)
     - [Yolanda](nombre)
     - [Zoe](nombre)
-    - Me llamo [adrián](nombre)
-    - Mi nombre es [Blanca](nombre)
-    - Soy [Carmen](nombre)
+    - Me llamo [adrián dominguez](nombre)
+    - Mi nombre es [Blanca martinez](nombre)
+    - Soy [Carmen Gimenez](nombre)
     - [Diego](nombre)
-    - [Eva](nombre)
-    - [Francisco](nombre)
+    - [Eva Morales](nombre)
+    - [Francisco Hinojosa](nombre)
     - [gloria Dominguez](nombre)
-    - [Héctor](nombre)
-    - [Irene](nombre)
-    - [Juan](nombre)
+    - [Héctor Gómez](nombre)
+    - [Irene López Segura](nombre)
+    - [Juan Martin Segovia](nombre)
     - [Kiko](nombre)
     - [Lorena](nombre)
     - [Manuel](nombre)

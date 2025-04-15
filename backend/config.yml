@@ -24,13 +24,13 @@ pipeline:
     use_lookup_tables: True 
     priority: 2
   - name: DIETClassifier
-    epochs: 100
+    epochs: 150
     entity_recognition: True
   - name: EntitySynonymMapper #sinonimos 
   - name: ResponseSelector
     epochs: 100
   - name: FallbackClassifier
-    threshold: 0.7
+    threshold: 0.55
     ambiguity_threshold: 0.2
 
 

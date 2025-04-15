@@ -4,7 +4,7 @@ import { text } from "stream/consumers";
 
 async function respuestachatbot(mensaje: string,sesion: string) {
   try {
-        const response = await axios.post('http://192.168.128.123:5005/webhooks/rest/webhook', {
+        const response = await axios.post('http://192.168.128.144:5005/webhooks/rest/webhook', {
         sender: sesion,
         message: mensaje, 
       });

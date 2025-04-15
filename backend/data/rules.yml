@@ -29,12 +29,6 @@ rules:
   - intent: imagen
   - action: utter_drop_imagen
 
-- rule: Inciar formulario #Iniciar formulario
-  steps:
-  - action: poner_siono_a_None
-  - action: utter_iniciar_formulario
-  - action: form_helpedesk
-  - active_loop: form_helpedesk
 
 
 - rule: Finalizar formulario #Finalizar formulario
@@ -45,7 +39,6 @@ rules:
   - active_loop: null
   - slot_was_set:
       - requested_slot: null
-  - action: cambio_problema
   - action: action_crear_ticket_helpdesk
 
 - rule: Pruebas

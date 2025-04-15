@@ -9,7 +9,6 @@ stories:
   - story: crear formulario
     steps:
     - intent: crear_ticket
-    - action: poner_siono_a_None
     - action: utter_iniciar_formulario
     - action: form_helpedesk
     - active_loop: form_helpedesk
@@ -26,6 +25,32 @@ stories:
     - intent: numero_ticket
     - action: action_estado_ticket
   
+  - story: El Usuario No continua con el Bot
+    steps:
+    - active_loop: form_helpedesk
+    - intent: no_ticket_helpdesk
+    - action: utter_preguntar_parar_form
+    - or:
+      - intent: afirmar
+      - intent: no_ticket_helpdesk
+    - action: action_deactivate_loop
+    - active_loop: null
+    - action: resetear_slots
+    - action: utter_terminado_form
+
+
+  - story: El Usuario No continua con el Bot Pero luego si
+    steps:
+    - active_loop: form_helpedesk
+    - intent: no_ticket_helpdesk
+    - action: utter_preguntar_parar_form
+    - or:
+      - intent: afirmar
+      - intent: no_ticket_helpdesk
+    - action: form_helpedesk
+
+  
+
   # CUANDO EL PROBLEMA SE HA SOLUCIONADO 
 
   - story: Problema con el ratón solucionado #RATON
@@ -148,3 +173,6 @@ stories:
     - action: utter_iniciar_formulario
     - action: form_helpedesk
     - active_loop: form_helpedesk
+
+
+    

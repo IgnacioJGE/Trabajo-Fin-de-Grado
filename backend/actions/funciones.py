@@ -7,15 +7,17 @@ from dotenv import load_dotenv
 import requests
 
 
-def decidir_persona_asignada(tipo_solicitud):
+def decidir_persona_asignada(tipo_solicitud):#toca cambiar esto para que el else sea Joseluis
     if tipo_solicitud == "Padua":
         return "Paco"
     elif tipo_solicitud in ["Equipos, etiquetadoras e impresoras", "Viaweb", "Otros"]:
         return "Jose Luis Martín"
     elif tipo_solicitud == ["Albarán digital", "Clientes"]:
         return "Jeickon"
-    else:
+    elif tipo_solicitud == "Desarrollos y proyectos":
         return "Álvaro"
+    else:
+        return "Jose Luis Martín"
     
 
 def calcular_importancia(importancia):
