@@ -39,7 +39,6 @@ class ValidateFormHelpedesk(FormValidationAction):
                 SlotSet("nombre", slot_value) 
             ]
 
-        
 class GuardarProblema(Action): #Legado esta funcion se mejoró con la validación
     def name(self):
         return "cambio_problema"
@@ -101,7 +100,7 @@ class Crearticket(Action):
         id= data.get("d", {}).get("ID")
         dispatcher.utter_message(text="Perfecto ya se ha enviado su ticket, el id es: " + str(id))
         return [Restarted()]
-    
+
 class ActionSaludarPersonalizado(Action):
     def name(self):
         return "action_saludar_personalizado"
@@ -115,7 +114,7 @@ class ActionSaludarPersonalizado(Action):
             dispatcher.utter_message(text="Hola, ¿cómo puedo ayudarte?")
         
         return []
-    
+
 class reset(Action):
 
 
@@ -131,8 +130,7 @@ class reset(Action):
                 SlotSet("importancia", None),
                 SlotSet("ticket", None),
         ]
-  
-  
+
 class sionoaNone(Action):
 
     def name(self):
@@ -140,7 +138,7 @@ class sionoaNone(Action):
 
     def run(self, dispatcher, tracker, domain):
         return [SlotSet("siono", None)]
-        
+
 class Estadoticket(Action):
     def name(self):
         return "action_estado_ticket"
@@ -159,8 +157,7 @@ class Estadoticket(Action):
         estado= data.get("d", {}).get("Estado_solicitud")
         dispatcher.utter_message(text="El estado de su ticket es: " + str(estado))
         return []
-    
-    
+
 class ActionPruebas(Action):
     def name(self):
         return "action_pruebas"

@@ -169,3 +169,11 @@ html,body {
   }
 }
 
+.custom-hover {
+  transition: color 0.2s;
+}
+
+.custom-hover:hover {
+  color: #FFF44F;
+  font-weight: bold;
+}
