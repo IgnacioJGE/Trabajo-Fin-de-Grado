@@ -1,8 +1,12 @@
-import React from 'react'
-
+import {Mostrarmanual} from '../components/mostrarmanual'
 const manuales = () => {
   return (
-    <div className='contendor-global'>Manuales</div>
+    <div>
+          <div className='contendor-global'>
+          <Mostrarmanual/>
+          </div>
+    </div>
+
   )
 }
 

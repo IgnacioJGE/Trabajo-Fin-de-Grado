@@ -6,18 +6,16 @@ from rasa_sdk.events import ActiveLoop,Restarted
 from rasa_sdk.events import SlotSet,FollowupAction,UserUtteranceReverted
 import os
 import requests
-from .funciones import decidir_persona_asignada,calcular_importancia,token_auth
+from .funciones import decidir_persona_asignada,calcular_importancia,token_auth,buscarcontra
 from dotenv import load_dotenv
-from rasa_sdk.executor import CollectingDispatcher
-from rasa_sdk.types import DomainDict
 
 
 class ValidateFormHelpedesk(FormValidationAction):
     def name(self) -> Text:
         return "validate_form_helpedesk"
-    
 
     def validate_siono(self, slot_value: Any, dispatcher, tracker, domain):
+
         if slot_value.lower() == "no":
             dispatcher.utter_message(text="De acuerdo, finalizamos el formulario.")
             return {"siono": "no"}
@@ -39,6 +37,29 @@ class ValidateFormHelpedesk(FormValidationAction):
                 SlotSet("nombre", slot_value) 
             ]
 
+    def validate_tipo_solicitud(self, slot_value, dispatcher, tracker, domain): #validación del tipo de solicitud
+        if (slot_value.lower().find("etique") or slot_value.lower().find("impres") or slot_value.lower().find("equip")):
+            return {"tipo_solicitud": "Equipos, etiquetadoras e impresoras"}
+        elif (slot_value.lower().find("viaw")):
+            return {"tipo_solicitud": "Viaweb"}
+        elif (slot_value.lower().find("otr")):
+            return {"tipo_solicitud": "Otros"}
+        elif (slot_value.lower().find("alba")):
+            return {"tipo_solicitud": "Albarán digital"}
+        elif (slot_value.lower().find("clien")):
+            return {"tipo_solicitud": "Clientes"}
+        elif (slot_value.lower().find("desarr")):
+            return {"tipo_solicitud": "Desarrollos y proyectos"}
+        elif (slot_value.lower().find("padu")):
+            return {"tipo_solicitud": "Padua"}
+        else:
+            dispatcher.utter_message(text="Lo siento, no entiendo el tipo de solicitud. Por favor, indícamelo de nuevo.")
+            return {"tipo_solicitud": None}
+    
+    def validate_problema(self, slot_value, dispatcher, tracker, domain):
+        mensaje_usuario = tracker.latest_message.get('text')
+        return { "problema": mensaje_usuario }
+        
 class GuardarProblema(Action): #Legado esta funcion se mejoró con la validación
     def name(self):
         return "cambio_problema"
@@ -144,6 +165,7 @@ class Estadoticket(Action):
         return "action_estado_ticket"
 
     async def run(self, dispatcher, tracker, domain):
+        load_dotenv()
         ticket=tracker.get_slot("ticket")
         json_data =  await token_auth()
         headers = {
@@ -151,11 +173,17 @@ class Estadoticket(Action):
         'Accept':'application/json;odata=verbose',
         'Content-Type': 'application/json;odata=verbose'
         }
-        url=f"https://te917868526.sharepoint.com/sites/SistemaHelpdesk/_api/web/lists/getbytitle('BBDD Sistemas')/items({ticket})"
+        url = os.getenv("url")  +f"({ticket})"
         p= requests.get(url, headers=headers)
         data= p.json()
         estado= data.get("d", {}).get("Estado_solicitud")
-        dispatcher.utter_message(text="El estado de su ticket es: " + str(estado))
+        solucion= data.get("d", {}).get("Descripci_x00f3_n_soluci_x00f3_n")
+        if(str(estado)=="Finalizado"):
+            dispatcher.utter_message(text="El estado de su ticket es: " + str(estado) + ".\nY la solución es: "+ str(solucion))
+        elif(str(estado)=="None"):
+            dispatcher.utter_message(text="No existe ningú ticket con el id: " + str(ticket))            
+        else:
+            dispatcher.utter_message(text="El estado de su ticket es: " + str(estado))
         return []
 
 class ActionPruebas(Action):
@@ -204,3 +232,30 @@ class ActionPruebas(Action):
         dispatcher.utter_message(text="Perfecto ya se ha enviado su ticket, el id es: " + str(id))
         return []
     
+class buscarcontras(Action):
+
+    def name(self):
+        return "buscar_contra"
+
+    def run(self, dispatcher, tracker, domain):
+        email= tracker.get_slot("emailconductor")
+        idpadua= tracker.get_slot("idpadua")
+         
+        contra= buscarcontra(email,idpadua)
+        if contra== "id":
+            dispatcher.utter_message(text="Se ha encontrado el id pero no conincide con el correo.")
+            return [SlotSet("idpadua", None),
+                    ActiveLoop("form_contras")]
+        elif contra== "correo":
+            dispatcher.utter_message(text="Se ha encontrado el correo pero no conincide con el id.")
+            return [SlotSet("emailconductor", None),
+                    ActiveLoop("form_contras")]
+        elif str(contra)== "None":
+            dispatcher.utter_message(text="No se ha encontrado un conductor con ese id ni ese correo.")
+            return [SlotSet("emailconductor", None),
+                    SlotSet("idpadua", None),
+                    ActiveLoop("form_contras")]
+        else:
+            dispatcher.utter_message(text="La contraseña es: " + str(contra))
+        return [SlotSet("idpadua", None),
+                SlotSet("emailconductor", None)]

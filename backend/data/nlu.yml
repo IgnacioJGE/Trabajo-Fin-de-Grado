@@ -150,6 +150,12 @@ nlu:
     - zxcvbnm
     - wsetdryftgyihuojij65
     - 65hittrdfklikrre6drfgyh
+    - sdviuhnmdo28938fn sdiucfhn
+    - sxdcib sikdjuhc isuhxd
+    - sdc2389fn isoudh
+    - wdsj98 09723ydnbh 
+    - sdciju soikdcnbhn ojsh
+    
 
 - intent: imagen
   examples: |
@@ -232,6 +238,29 @@ nlu:
     - [personal@narval.es](email)
     - [luis.huesca@hotmail.com](email)
     - [elena.gomez@narval.e.telefonica.net](email)
+    - [choferextsantiago22@gmail.com](email)
+    - [chofernarval.malaga19@gmail.com](email)
+    - [chofer.valladolid03@gmail.com](email)
+    - [choferextgranada@gmail.com](email)
+    - [choferbarcelona02@gmail.com](email)
+    - [choferalmeria0@gmail.com](email)
+    - [chofer.sevilla06@gmail.com](email)
+    - [chofer.sevilla44@gmail.com](email)
+    - [chofer.sevilla63@gmail.com](email)
+    - [choferextsantiago1@gmail.com](email)
+    - [chofer1granada@gmail.com](email)
+    - [pedro.mflores@transportesnarval.es](email)
+    - [ricardo.muriano@transportesnarval.es ](email)
+    - [francisco.muriana@transportesnarval.es](email)
+    - [anatoli.georgiev@transportesnarval.es](email)
+    - [felipe.garcia@transportesnarval.es](email)
+    - [lorenzo.valhondo@transportesnarval.es](email)
+    - [rodrigo.morales@transportesnarval.es](email)
+    - [jantonio.pardo@transportesnarval.es](email)
+    - [oscarm.gonzalez@transportesnarval.es](email)
+    - [jose.novas@transportesnarval.es](email)
+    - [franciscoj.gonzalez@transportesnarval.es](email)
+    - [luis.pineiro@transportesnarval.es](email)
 
 - intent: decir_departamento
   examples: |
@@ -283,18 +312,64 @@ nlu:
     - ¿Cómo va mi ticket?
     - en que estado se encuentra mi tiquet
 
+- intent: recuperar_contrasena_conductor
+  examples: |
+    - Quiero recuperar la contraseña del conductor
+    - Quiero recuperar la contraseña de mi cuenta de conductor
+    - Quiero recuperar la contraseña de mi cuenta de conductor
+    - necesito saber la contraseña de un conductor
+    - quiero saber la contraseña de este conductor : [choferextbarcelona30@yahoo.com](email)
+    - necesito la contraseña de este conductor : [0080014](idpauda)
+    - en la delegacion tenemos un conductor que no se acuerda de su contraseña
+    - necesito la contraseña de este conductor : [0080014](idpadua)
+    - necesito la contraseña de este conductor : [chofernarval.malaga22@gmail.com](email)
+
+- intent: daridpadua
+  examples: |
+    - [0080014](idpadua)
+    - [0080015](idpadua)
+    - [0080016](idpadua)
+    - [0080017](idpadua)
+    - [0080018](idpadua)
+    - [0080019](idpadua)
+    - [0080020](idpadua)
+    - [0080021](idpadua)
+    - [0080022](idpadua)
+    - [0080023](idpadua)
+    - [0280361](idpadua)
+    - [0280362](idpadua)
+    - [0470001](idpadua)
+    - [0470002](idpadua)
+    - [5000009](idpadua)
+    - [5000010](idpadua)
+    - [0290499](idpadua)
+    - [140006](idpadua)
+    - [0410188](idpadua)
+    - el id de padua del conductor es [0080014](idpadua)
+    - el id es: [0412345](idpadua)
+    - el id de padua es [0410045](idpadua)
+
 - intent: numero_ticket
   examples: |
     - [56](ticket)
     - [12349](ticket)
     - [90](ticket)
-    - [01234567890](ticket)
-    - [78901234567890](ticket)
+    - [12](ticket)
+    - [78901](ticket)
     - [34](ticket)
     - [326](ticket)
     - [243](ticket)
     - [628](ticket)
     - [1000](ticket)
+    - [1236](ticket)
+    - [420](ticket)
+    - [876](ticket)
+    - [245](ticket)
+    - [231](ticket)
+    - [456](ticket)
+    - mi ticket es [420](ticket)
+    - el numero de mi ticket es [876](ticket)
+    - el ticket es [231](ticket)
     
 - intent: decir_nombre
   examples: |
@@ -379,23 +454,23 @@ nlu:
     - [Ramón](nombre)
     - [Salvador García](nombre)
     - [Tamara](nombre)
-    - [Ulises](nombre)
-    - [vanesa](nombre)
+    - [Ulises Martinez Lopez](nombre)
+    - [vanesa Sinesio Delgado](nombre)
     - [Walter](nombre)
     - [Xenia](nombre)
     - [Yago](nombre)
     - [Zulema](nombre)
-    - Me llamo [Andrés](nombre)
+    - Me llamo [Andrés Lopez Lopez](nombre)
     - Mi nombre es [Bárbara](nombre)
     - Soy [Clara](nombre)
     - [Damián](nombre)
-    - [Ezequiel](nombre)
+    - [Ezequiel Ramos Santo](nombre)
     - [Félix](nombre)
-    - [Guillermo](nombre)
+    - [Guillermo Dominguez Heredia](nombre)
     - [Hana](nombre)
-    - [Iván Rubio](nombre)
+    - [Iván Rubio García](nombre)
     - [Joaquín](nombre)
-    - [Karen](nombre)
+    - [Karen Mendez Santo](nombre)
     - [Lidia](nombre)
     - [Mateo](nombre)
     - [Nicolás](nombre)
@@ -414,6 +489,13 @@ nlu:
     - [luisa](nombre)
     - me llamooo [juan alberto](nombre)
     
+- regex: ticket
+  examples: |
+    - \b\d{1,6}\b
+
+- regex: idpadua
+  examples: |
+    - \b\d{7}\b
 
 
 

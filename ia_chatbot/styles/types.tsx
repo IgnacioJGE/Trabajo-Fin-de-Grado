@@ -5,3 +5,9 @@ export type SideNavItem = {
     submenu?: boolean;
     submenuItems?: SideNavItem[];
 }
+
+
+export type Manual={
+    url:string;
+    descripcion:string;
+}

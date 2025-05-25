@@ -1,11 +1,7 @@
 'use client';
 import React from 'react'
 import { cn } from '../lib/utils';
-import { useSelectedLayoutSegment } from 'next/navigation';
-import { usePathname } from 'next/navigation';
-import { SIDENAV_ITEMS } from '@/styles/components';
-import { Icon } from '@iconify/react/dist/iconify.js';
-import {motion, useCycle} from 'framer-motion';
+
 
 export default function HeaderButton({ onClick }: { onClick: () => void}){
   return (

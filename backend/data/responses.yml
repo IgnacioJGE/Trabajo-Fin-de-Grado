@@ -25,15 +25,8 @@ responses:
   - text: "¿En qué puedo ayudarte {nombre}?"
 
   utter_default:
-  - text: "Lo siento, no te he entendido, puedo ayudarte con los siguientes problemas:\n
-           • Problemas de acceso a Viaweb / Padua\n
-           • Problemas con equipos o material informatico\n
-           • Problemas con impresoras\n
-           • Problemas con programas informaticos\n
-           • Grenerar tickets HelpDesk\n
-           • Consultar estado tickets HelpDesk\n
-           • Recuperar contraseñas de conductores\n
-           • Manuales tecnicos"
+  - text: "Lo siento, no te he podido entender.\n
+          Si necesitas ayuda con lo que puedo hacer, puedes acceder a la sección de <strong>ayuda</strong> en el menú lateral."
   
   utter_drop_imagen:
     #- text: "https://files.catbox.moe/83itdt.png"
@@ -56,7 +49,7 @@ responses:
 
   utter_ask_tipo_solicitud:
   - text: "¿Qué tipo de solicitud deseas realizar?\n
-      <strong>Por favor selecciona una opción:</strong>\n
+      <strong>Por favor selecciona una opción:</strong>\n \n
            • Padua.\n
            • ViaWeb.\n
            • Equipos, etiquetadoras e impresoras.\n
@@ -67,12 +60,18 @@ responses:
 
   utter_ask_importancia:
   - text: "¿Qué importancia tiene tu solicitud?\n
-      <strong>Por favor selecciona una opción:</strong>\n
+      <strong>Por favor selecciona una opción:</strong>\n \n
            • Crítica.\n
            • Importante.\n
            • Algo importante.\n
            • Poco importante.\n
            • Mínima.\n"
+
+  utter_ask_idpadua:
+  - text: "Indicame el ID de Padua del conductor:"
+
+  utter_ask_emailconductor:
+  - text: "Indicame el email del conductor:"
 
   utter_ask_problema_usuario_cambio:
   - text: "Indicame el problema:"
@@ -98,8 +97,14 @@ responses:
   - text: "Perfecto, indícame tu número de ticket"
 
   utter_preguntar_parar_form:
-  - text: "¿Seguro que no quieres poner el ticket?(sí/no)"
+  - text: "¿Estas seguro de que quieres cancelar el ticket?(sí/no)"
 
   utter_terminado_form:
   - text: "Perfecto, se ha cancelado el ticket. ¿Puedo ayudarte con algo más?"
+  utter_repetir:
+  - text: "Lo siento, no te he entendido, ¿puedes repetirlo?"
+
+  utter_problema_reconocido_pero_no_respuesta:
+  - text: "Lo siento, no tengo información sobre ese problema.\n
+           Pero si quieres puedo abrir un ticket para que lo revisen en el departamento de sitemas<strong>(sí/no)</strong>"
 

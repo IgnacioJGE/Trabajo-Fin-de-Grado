@@ -5,7 +5,7 @@ version: "3.1"
 responses:
 
   utter_problema_raton:
-  - text: "Para resolver tu problema pueba lo siguiente:\n
+  - text: "Para resolver tu problema pueba lo siguiente:\n \n
           - <strong>Si tu ratón es bluetooth</strong>\n
             • Si el ratón falla prueba a cambiar el pincho del ratón de puerto USB. \n
             • Comprueba si el ratón está encendido, con la pestaña que está en la parte inferior. \n
@@ -14,11 +14,12 @@ responses:
           - <strong>Si tu ratón no es bluetooth</strong>\n
             • Comprueba que esté conectado correctamente en el puerto USB. \n
             • Prueba si  funciona en otros puertos USB. \n
-            • Reinicia el ordenador para que se reestablezcan los puertos USB.\n
-          Espero que hayas podido solucionar tu problema. De no ser así, ¿quieres poner un ticket en el HelpDesk?"
+            • Reinicia el ordenador para que se reestablezcan los puertos USB.\n \n
+          Espero que hayas podido solucionar tu problema.\n
+          De no ser así, <strong>¿quieres poner un ticket en el HelpDesk?</strong>"
 
   utter_problema_teclado:
-  - text: "Para resolver tu problema pueba lo siguiente:\n
+  - text: "Para resolver tu problema pueba lo siguiente:\n \n
           - <strong>Si tu teclado es bluetooth</strong>\n
             • Si el teclado falla prueba a cambiar el pincho de puerto USB. \n
             • Comprueba si el teclado está encendido, con la pestaña que pone ON OFF. \n
@@ -27,43 +28,47 @@ responses:
           - <strong>Si tu teclado no es bluetooth</strong>\n
             • Comprueba que esté conectado correctamente en el puerto USB. \n
             • Prueba si  funciona en otros puertos USB. \n
-            • Reinicia el ordenador para que se reestablezcan los puertos USB.\n
-          Espero que hayas podido solucionar tu problema. De no ser así, ¿quieres poner un ticket en el HelpDesk?"
+            • Reinicia el ordenador para que se reestablezcan los puertos USB.\n \n
+          Espero que hayas podido solucionar tu problema.\n
+          De no ser así, <strong>¿quieres poner un ticket en el HelpDesk?</strong>"
 
   utter_ordenador_lento:
-  - text: "Si tu ordenador va lento, prueba a hacer lo siguiente:\n
+  - text: "Si tu ordenador va lento, prueba a hacer lo siguiente:\n \n
           • Cierra las aplicaciones que no estés utilizando. \n
           • Comprueba si tienes actualizaciones pendientes. \n
           • Prueba a eliminar los archivos que no necesites y no sean importantes. \n
           • Trata de cerrar todas las pestañas del navegador que no estés usando activamente. \n
           • Si el problema persiste, reinicia el ordenador. \n
-          • Guarda tu trabajo y reinicia el ordenador. \n
-          Espero que hayas podido solucionar tu problema. De no ser así, ¿quieres poner un ticket en el HelpDesk?"
+          • Guarda tu trabajo y reinicia el ordenador. \n \n
+          Espero que hayas podido solucionar tu problema.\n
+          De no ser así, <strong>¿quieres poner un ticket en el HelpDesk?</strong>"
 
   utter_trackpad_desactivado:
-  - text: "Para activar el panel tactil de tu ordenador sigue los siguientes pasos:\n
+  - text: "Para activar el panel tactil de tu ordenador sigue los siguientes pasos:\n \n
           • Pulsa la tecla Fn y luego busca entre las teclas superiores una que tenga el icono del panel tactil y pulsala a la vez. \n
           • Por ejemplo, en muchos portatiles HP, Lenovo o Asus, es Fn + F6 o Fn + F7. \n
           • Si esto no te funcion haz clic en configurarción. \n
           • Haz clic en Dispositiovos. \n
           • Haz clic en panel táctil. \n
-          • Y finalmnente haz clic en Activar. \n
-          Espero que hayas podido solucionar tu problema. De no ser así, ¿quieres poner un ticket en el HelpDesk?"
+          • Y finalmnente haz clic en Activar. \n \n
+          Espero que hayas podido solucionar tu problema.\n
+          De no ser así, <strong>¿quieres poner un ticket en el HelpDesk?</strong>"
   
   utter_problema_espacio_disco:
-  - text: "Para liberar espacio en tu disco duro sigue los siguientes pasos:\n
+  - text: "Para liberar espacio en tu disco duro sigue los siguientes pasos:\n \n
           • Elimina archivos de la papelera de reciclaje. \n
           • Desinstala programas que no utilices. \n
           • Si esto no te ha funcionado prueba lo siguiente, haz click en el explorador de archivos. \n
           • Haz click en elste equipo. \n
           • Haz click derecho en el disco que no tenga espacio y selecciona propiedades. \n
           • Haz click en liberar espacio. \n
-          • Finalmente selecciona los archivos que no necesites y haz click en aceptar. \n
-          Espero que hayas podido solucionar tu problema. De no ser así, ¿quieres poner un ticket en el HelpDesk?"
+          • Finalmente selecciona los archivos que no necesites y haz click en aceptar. \n \n
+          Espero que hayas podido solucionar tu problema.\n
+          De no ser así, <strong>¿quieres poner un ticket en el HelpDesk?</strong>"
 
 
   utter_problema_correo_lleno:
-  - text: "Para liberar espacio en tu correo, sigue estos pasos:\n
+  - text: "Para liberar espacio en tu correo, sigue estos pasos:\n \n
           • Elimina los correos que no necesites.\n
           • Vacía la bandeja de spam.\n
           • Borra los correos almacenados en la carpeta de borradores.\n
@@ -71,13 +76,13 @@ responses:
           \n
           Si el problema persiste, prueba lo siguiente:\n
           • Crea una nueva carpeta en tu almacenamiento en línea.\n
-          • Mueve a esa carpeta los correos que desees conservar.\n
-          \n
-          Espero que esta solución te haya sido útil. Si el problema continúa, ¿te gustaría abrir un ticket en el HelpDesk?"
+          • Mueve a esa carpeta los correos que desees conservar.\n \n
+          Espero que hayas podido solucionar tu problema.\n
+          De no ser así, <strong>¿quieres poner un ticket en el HelpDesk?</strong>"
 
 
   utter_problema_etiquetadoras:
-  - text: "Si tienes problemas con la etiquetadora, sigue estos pasos:\n
+  - text: "Si tienes problemas con la etiquetadora, sigue estos pasos:\n \n
           • Si va lento: No poner muchas etiquetas de bulto en cola (las pequeñas).\n
           • Si no encuentra la impresora:\n
               - Comprobar que la impresora esté conectada.\n
@@ -88,6 +93,6 @@ responses:
               - Hacer clic en 'Cambiar', luego 'Aceptar' y repetir este paso una vez más.\n
               - Al imprimir, debería permitir seleccionar la etiquetadora.\n
           • Si no imprime la página de prueba, abre un ticket.\n
-          • Si la etiquetadora está conectada a otro equipo comprueba que el equipo en el que está conectada uan sesión iniciada.\n
-          \n
-          Espero que esta solución te haya sido útil. Si el problema continúa, ¿te gustaría abrir un ticket en el HelpDesk?"
+          • Si la etiquetadora está conectada a otro equipo comprueba que el equipo en el que está conectada uan sesión iniciada.\n \n
+          Espero que hayas podido solucionar tu problema.\n
+          De no ser así, <strong>¿quieres poner un ticket en el HelpDesk?</strong>"

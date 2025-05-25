@@ -1,10 +1,12 @@
 version: "3.1"
 #Historias
+
 stories:
   - story: Nombre recibido
     steps:
     - intent: decir_nombre
     - action: utter_hola_conociemiento
+  
 
   - story: crear formulario
     steps:
@@ -25,7 +27,7 @@ stories:
     - intent: numero_ticket
     - action: action_estado_ticket
   
-  - story: El Usuario No continua con el Bot
+  - story: El Usuario No continua con el Bot 
     steps:
     - active_loop: form_helpedesk
     - intent: no_ticket_helpdesk
@@ -45,11 +47,26 @@ stories:
     - intent: no_ticket_helpdesk
     - action: utter_preguntar_parar_form
     - or:
-      - intent: afirmar
-      - intent: no_ticket_helpdesk
+      - intent: negar
+      - intent: crear_ticket
     - action: form_helpedesk
 
+  - story: Problema reconocido no solucionado
+    steps:
+    - intent: problemas_generales
+    - action: utter_problema_reconocido_pero_no_respuesta
+    - intent: negar
+    - action: utter_alegrarse
   
+  - story: Problema reconocido abre formulario
+    steps:
+    - intent: problemas_generales
+    - action: utter_problema_reconocido_pero_no_respuesta
+    - intent: afirmar
+    - action: poner_siono_a_None
+    - action: utter_iniciar_formulario
+    - action: form_helpedesk
+    - active_loop: form_helpedesk
 
   # CUANDO EL PROBLEMA SE HA SOLUCIONADO 
 

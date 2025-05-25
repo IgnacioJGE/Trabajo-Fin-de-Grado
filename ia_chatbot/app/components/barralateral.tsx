@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { SIDENAV_ITEMS } from '@/styles/components';
-
+import Image from 'next/image'
 
 export default function Barralateral({ isOpen, onClose }: { isOpen: boolean, onClose: () => void }) {
     return (
@@ -18,7 +18,7 @@ export default function Barralateral({ isOpen, onClose }: { isOpen: boolean, onC
           transition={{ type: 'spring', stiffness: 200, damping: 25 }}
           className="fixed top-0 left-0 h-full w-64 bg-gray-50  z-50 p-4"
         >
-            <img src="../recursos/logo-imagen.png" className="mx-auto mb-12"/>
+            <Image src="/recursos/logo-imagen.png" alt="Logo" width={200} height={200} className="mx-auto mb-12"/>
   
           <nav className="flex flex-col space-y-5">
             {SIDENAV_ITEMS.map((item) => (

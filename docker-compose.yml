@@ -1,0 +1,23 @@
+
+
+services:
+
+  frontend:
+    container_name: frontend
+    build:
+      context: ./ia_chatbot
+    ports:
+      - "3000:3000"
+    depends_on:
+      - chatbot
+
+
+  chatbot:
+    volumes:
+      - /mnt/empleados:/mnt/empleados
+    container_name: chatbot
+    build:
+      context: ./backend
+    ports:
+      - "5005:5005"
+      - "5055:5055"

@@ -5,6 +5,7 @@ import os
 import string
 from dotenv import load_dotenv
 import requests
+import openpyxl
 
 
 def decidir_persona_asignada(tipo_solicitud):#toca cambiar esto para que el else sea Joseluis
@@ -60,3 +61,41 @@ async def  token_auth():
     r = requests.post(url1, data=data, headers=headers)
     json_data = json.loads(r.text)
     return json_data
+
+
+def buscarcontra(correo:string,idpadua:string):
+    load_dotenv()
+    correoencontrado:bool = False
+    idEncontrado:bool = False
+    excel1ruta=os.getenv("contra1")
+    excel2ruta=os.getenv("contra2")
+    excelsheet1 = openpyxl.load_workbook(excel1ruta)
+    for sheet in excelsheet1.sheetnames:
+        worksheet = excelsheet1[sheet]
+        for row in worksheet.iter_rows():
+            if row[0].value == idpadua and row[5].value != correo:
+                idEncontrado = True
+                return("id")
+            if row[0].value != idpadua and row[5].value == correo:
+                print(row[0].value)
+                print(row[5].value)
+                correoencontrado = True
+                return("correo")
+                
+            if row[0].value == idpadua and row[5].value == correo:
+                return(row[7].value)
+            
+    excelsheet2 = openpyxl.load_workbook(excel2ruta)       
+    if correoencontrado!=True and idEncontrado!=True:
+        for sheet in excelsheet2.sheetnames:
+            worksheet = excelsheet2[sheet]
+            for row in worksheet.iter_rows():
+                if row[0].value == idpadua and row[5].value != correo:
+                    idEncontrado = True
+                    return("id")
+                if row[0].value != idpadua and row[5].value == correo:
+                    correoencontrado = True
+                    return("correo")
+                if row[0].value == idpadua and row[5].value == correo:
+                    return(row[7].value) 
+    

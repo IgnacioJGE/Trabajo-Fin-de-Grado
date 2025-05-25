@@ -22,6 +22,9 @@ pipeline:
     max_ngram: 6
   - name: RegexEntityExtractor
     use_lookup_tables: True 
+    use_regexes: True
+    use_word_boundaries: True
+    case_sensitive: False
     priority: 2
   - name: DIETClassifier
     epochs: 150
@@ -30,7 +33,7 @@ pipeline:
   - name: ResponseSelector
     epochs: 100
   - name: FallbackClassifier
-    threshold: 0.55
+    threshold: 0.6
     ambiguity_threshold: 0.2
 
 

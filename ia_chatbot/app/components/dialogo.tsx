@@ -4,18 +4,19 @@
 import React from "react";
 import { useState } from "react";
 import respuestachatbot from "./respuestachatbot";
+import Image from "next/image";
+import generarSesionUnica from "./generadorsesion";
 
-type Propssesion = {
-  sesion: string;
-};
+const sesion = generarSesionUnica();
 
-function Dialogo({ sesion }: Propssesion) {
+function Dialogo() {
+  console.log(sesion);
   const regexemail = RegExp("/recursos/[A-Za-z0-9]+.png");
   const [inputValue, setInputValue] = useState("");
   const [displayValue, setDisplayValue] = useState<
     { text: string; usuario: string }[]
   >([]);
-  async function handlesubmit(e:any) {
+  async function handlesubmit(e: any) {
     e.preventDefault();
     if (inputValue != "") {
       setDisplayValue((prevDisplay) => [
@@ -25,7 +26,8 @@ function Dialogo({ sesion }: Propssesion) {
       const respuesta = await respuestachatbot(inputValue, sesion);
       console.log(respuesta);
       setTimeout(() => {
-        for (let i = 0; i < respuesta.length; i++) { // recibe un array con todos los mensajes y comprueba si son imagenes o texto
+        for (let i = 0; i < respuesta.length; i++) {
+          // recibe un array con todos los mensajes y comprueba si son imagenes o texto
           if (regexemail.test(respuesta[i].text)) {
             setDisplayValue((prevDisplay) => [
               ...prevDisplay,
@@ -42,7 +44,7 @@ function Dialogo({ sesion }: Propssesion) {
       setInputValue("");
     }
   }
-  const handleKeyPress = (e:any) => {
+  const handleKeyPress = (e: any) => {
     if (e.key === "Enter") {
       e.preventDefault();
       handlesubmit(e);
@@ -71,7 +73,14 @@ function Dialogo({ sesion }: Propssesion) {
             );
           } else {
             return (
-              <img className="imagen-left-box" key={index} src={val.text}></img>
+              <Image
+                className="imagen-left-box"
+                key={index}
+                src={val.text}
+                alt="Hola"
+                width={400}
+                height={300}
+              />
             );
           }
         })}

@@ -19,6 +19,15 @@ rules:
   - intent: nlu_fallback
   - action: utter_default
 
+- rule: Responder en medio de formulario 
+  condition:
+    - active_loop: form_helpedesk
+  steps:
+  - intent: nlu_fallback
+  - action: utter_repetir
+  - action: form_helpedesk
+  - active_loop: form_helpedesk
+
 - rule: basura
   steps:
   - intent: basura
@@ -29,7 +38,21 @@ rules:
   - intent: imagen
   - action: utter_drop_imagen
 
+- rule: abrir_form_contraseña
+  steps:
+  - intent: recuperar_contrasena_conductor
+  - action: form_contras
+  - active_loop: form_contras
 
+- rule: cerrar_form_contraseña
+  condition:
+  - active_loop: form_contras
+  steps:
+  - action: form_contras
+  - active_loop: null
+  - slot_was_set:
+      - requested_slot: null
+  - action: buscar_contra
 
 - rule: Finalizar formulario #Finalizar formulario
   condition:
