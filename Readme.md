@@ -56,8 +56,7 @@ cd ia_chatbot
 # Instala las dependencias
 npm install
 
-
-🚀 Ejecución del Proyecto
+##🚀 Ejecución del Proyecto
 
 1. Ejecutar Rasa
 Desde dos terminales distintos, estando dentro de la carpeta backend, ejecuta:
