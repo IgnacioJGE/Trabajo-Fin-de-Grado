@@ -56,6 +56,8 @@ cd ia_chatbot
 # Instala las dependencias
 npm install
 
+---
+
 ## 🚀 Ejecución del Proyecto
 
 1. Ejecutar Rasa
@@ -88,9 +90,9 @@ npx next start -H 0.0.0.0 -p 3000
 
 Finalmente podrás acceder al proyecto desde tu navegador en http://localhost:3000.
 
+---
 
-
-🐳 Alternativa: Usar Docker
+## 🐳 Alternativa: Usar Docker
 
 Si tienes Docker y Docker Compose instalado:
 
